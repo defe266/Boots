@@ -168,6 +168,16 @@
 				
 			if(email_exists( $data['user_email'] ) )
 				BootsAPI_pushError($errors, 'user_email', __('Email in use.','BootsAPI') );
+				
+			
+			if($data['fullname_required']){
+			
+				if($data['first_name'] == '')
+					BootsAPI_pushError($errors, 'first_name', __('Required.','BootsAPI') );
+				
+				if($data['last_name'] == '')
+					BootsAPI_pushError($errors, 'last_name', __('Required.','BootsAPI') );
+			}
 			
 			
 			
