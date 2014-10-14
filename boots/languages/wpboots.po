@@ -1,0 +1,483 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Twpboots_0_0_1\n"
+"POT-Creation-Date: 2012-10-03 20:07+0100\n"
+"PO-Revision-Date: 2012-10-03 20:18+0100\n"
+"Last-Translator: gabriel <gabriel@estudio-creativo.com>\n"
+"Language-Team: yo <gabriel@estudio-creativo.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.3\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/"
+"wpbootstrap/wpboots_0_0_8/wpbootstrap\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/"
+"themes/wpbootstrap/wpboots_0_0_8/wpbootstrap\n"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/404.php:18
+msgid "Well this is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Bueno, resulta algo embarazoso..."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/404.php:22
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching, or one of the links below, can help."
+msgstr ""
+"Parece que no podemos encontrar lo que estás buscando. Tal vez la opción de "
+"búsqueda, o uno de los enlaces de abajo, puedan ayudar."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/404.php:29
+msgid "Most Used Categories"
+msgstr "Categorías más usadas"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/404.php:37
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Prueba buscando en el archivo mensual. %1$s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/archive.php:27
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Archivo Diario: %s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/archive.php:29
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Archivo Mensual: %s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/archive.php:31
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Archivo Anual: %s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/archive.php:33
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/sidebar.php:18
+msgid "Archives"
+msgstr "Archivo"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/archive.php:63
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/author.php:61
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/category.php:52
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/index.php:49
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/search.php:37
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/tag.php:54
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/taxonomy-project-type.php:230
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/template-blog.php:59
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/template-portfolio.php:228
+msgid "Nothing Found"
+msgstr "No se ha encontrado nada"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/archive.php:67
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/author.php:65
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/category.php:56
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/index.php:53
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/tag.php:58
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/taxonomy-project-type.php:234
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/template-blog.php:63
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/template-portfolio.php:232
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que no podemos encontrar lo que estás buscando. La opción de búsqueda "
+"podría ayudar."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/author.php:29
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Archivo del autor: %s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/category.php:20
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/taxonomy-project-type.php:45
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Archivo de categoría: %s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/comments.php:16
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+"Esta entrada está protegida. Introduzca la contraseña para ver los "
+"comentarios."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/comments.php:39
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/comments.php:59
+msgid "Comment navigation"
+msgstr "Menú de discursión"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/comments.php:40
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/comments.php:60
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarios antiguos"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/comments.php:41
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr "Comentarios nuevos &rarr;"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/comments.php:71
+msgid "Comments are closed."
+msgstr "La discursión está cerrada"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-aside.php:23
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-gallery.php:28
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-image.php:18
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content.php:24
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continuar leyendo <span class=\"meta-nav\">&rarr;</span>"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-aside.php:24
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-gallery.php:50
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-image.php:19
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-page.php:17
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-single.php:18
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content.php:25
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/image.php:87
+msgid "Pages:"
+msgstr "Paginas:"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-aside.php:32
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-gallery.php:80
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-image.php:26
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content.php:55
+msgid "Leave a comment"
+msgstr "Deja un comentario"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-aside.php:32
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-gallery.php:80
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-image.php:26
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content.php:55
+msgid "1 Comment"
+msgstr "1 Comentario"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-aside.php:32
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-gallery.php:80
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-image.php:26
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content.php:55
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-aside.php:34
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-gallery.php:84
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-image.php:28
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-page.php:18
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-single.php:56
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content.php:59
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/image.php:35
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/image.php:101
+msgid "Edit"
+msgstr "Editar"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-gallery.php:58
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-gallery.php:69
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-single.php:24
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content.php:33
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content.php:44
+msgid ", "
+msgstr ", "
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-gallery.php:62
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content.php:37
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Publicado en %1$s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-gallery.php:73
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content.php:48
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Etiquetado como %1$s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-single.php:32
+#, php-format
+msgid ""
+"This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink "
+"to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"Esta entrada fue etiquetada %2$s. Guarda el <a href=\"%3$s\" title=\"Enlace "
+"a %4$s\" rel=\"bookmark\">enlace</a>."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-single.php:34
+#, php-format
+msgid ""
+"Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+"Guarda el <a href=\"%3$s\" title=\"Enlace a %4$s\" rel=\"bookmark\">enlace</"
+"a>."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-single.php:40
+#, php-format
+msgid ""
+"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
+"title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"Esta entrada fue publicada en %1$s y etiquetada %2$s. Guarda el <a href="
+"\"%3$s\" title=\"Enlace a %4$s\" rel=\"bookmark\">enlace</a>."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/content-single.php:42
+#, php-format
+msgid ""
+"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title="
+"\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"Esta entrada fue publicada en %1$s. Guarda el <a href=\"%3$s\" title="
+"\"Enlace a %4$s\" rel=\"bookmark\">enlace</a>."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/header.php:44
+#, php-format
+msgid "Page %s"
+msgstr "Pagina %s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/image.php:25
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s"
+"\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">"
+"%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\">%7$s</a>"
+msgstr ""
+"Publicado <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s"
+"\">%2$s</abbr></span> a las <a href=\"%3$s\" title=\"Link to full-size image"
+"\">%4$s &times; %5$s</a> en <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\">%7$s</a>"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/image.php:39
+msgid "&larr; Previous"
+msgstr "&larr; Anterior"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/image.php:40
+msgid "Next &rarr;"
+msgstr "Siguiente &rarr;"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/image.php:93
+#, php-format
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Publica "
+"un comentario</a> o deja un trackback: <a class=\"trackback-link\" href=\"%s"
+"\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/image.php:95
+#, php-format
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+"La discursión está cerrada, pero puedes dejar un trackback: <a class="
+"\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel="
+"\"trackback\">Trackback URL</a>."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/image.php:97
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+"Trackbacks están cerrados pero puedes <a class=\"comment-link\" href="
+"\"#respond\" title=\"Post a comment\">dejar un comentario</a>."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/image.php:99
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Comentarios y trackbacks están cerrados."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados de búsqueda para: %s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/search.php:41
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Lo sentimos, pero no hay coincidencias para sus términos de búsqueda. Por "
+"favor, inténtelo de nuevo con distintas palabras clave."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/searchform.php:10
+msgid "Search"
+msgstr "Buscar"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/sidebar.php:25
+msgid "Meta"
+msgstr "Meta"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/tag.php:20
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Archivo de Etiquetas: %s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/taxonomy-project-type.php:172
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/template-portfolio.php:167
+msgid "Read more"
+msgstr "Leer más"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:5
+msgid "Banners"
+msgstr "Banners"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:6
+msgid "Banner"
+msgstr "Banner"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:7
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:8
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:10
+msgid "Add banner"
+msgstr "Añadir banner"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:9
+msgid "Edit banner"
+msgstr "Editar banner"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:11
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:11
+msgid "See proyecto"
+msgstr "Ver proyecto"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:12
+msgid "Find banner"
+msgstr "Buscar banners"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:13
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:14
+msgid "No banners"
+msgstr "No hay banners"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:39
+msgid "banner types"
+msgstr "Tipos de banner"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_banners.php:39
+msgid "banner type"
+msgstr "tipo de banner"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:5
+msgid "Projects"
+msgstr "Proyectos"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:6
+msgid "Project"
+msgstr "Proyecto"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:7
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:8
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:10
+msgid "Add project"
+msgstr "Añadir proyecto"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:9
+msgid "Edit project"
+msgstr "Editar proyecto"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:12
+msgid "Find project"
+msgstr "Buscar proyecto"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:13
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:14
+msgid "No projects"
+msgstr "No hay proyectos"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:39
+msgid "Project types"
+msgstr "Tipos de proyectos"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_portfolio.php:39
+msgid "Project type"
+msgstr "Tipo de proyecto"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:67
+msgid "Primary Menu"
+msgstr "Menú principal"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:105
+msgid "Sidebar 1"
+msgstr "Sidebar 1"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:114
+msgid "Sidebar 2"
+msgstr "Sidebar 2"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:116
+msgid "An optional second sidebar area"
+msgstr "Sidebar adicional opcional"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:124
+msgid "Footer 1"
+msgstr "Pie 1"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:126
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:136
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:146
+msgid "Footer area"
+msgstr "Área del pie"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:134
+msgid "Footer 2"
+msgstr "Pie 2"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:144
+msgid "Footer 3"
+msgstr "Pie 3"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:166
+msgid "Post navigation"
+msgstr "Menú de entradas"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:179
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Entradas antiguas"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:183
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Entradas nuevas <span class=\"meta-nav\">&rarr;</span>"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:213
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:213
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:236
+msgid "(Edit)"
+msgstr "(Editar)"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:223
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">dice:</span>"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:226
+msgid "Your comment is awaiting moderation."
+msgstr "Tu comentario está esperando moederación."
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:234
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s a las %2$s"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:262
+#, php-format
+msgid ""
+"<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel="
+"\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</"
+"time></a><span class=\"byline\"> <span class=\"sep\"> by </span> <span class="
+"\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel="
+"\"author\">%7$s</a></span></span>"
+msgstr ""
+"<span class=\"sep\">Publicado en </span><a href=\"%1$s\" title=\"%2$s\" rel="
+"\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</"
+"time></a><span class=\"byline\"> <span class=\"sep\"> por </span> <span "
+"class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" "
+"rel=\"author\">%7$s</a></span></span>"
+
+#: /Users/defekator266/Dropbox/CODIGO/CREACIONES/WP/themes/wpbootstrap/wpboots_0_0_8/wpbootstrap/functions/setup_theme.php:268
+#, php-format
+msgid "View all posts by %s"
+msgstr "Ver todas las entradas por %s"

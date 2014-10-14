@@ -1,0 +1,134 @@
+/*######## Layout & menu animations #######*/
+
+html.cbp-sp-open {
+    overflow: hidden;
+}
+
+.cbp-spmenu {
+	position: fixed;
+}
+
+.cbp-spmenu-vertical {
+    width: 265px;
+    height: 100%;
+    top: 0px;
+    z-index: 2;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #353534;
+    color: #E3E3DD;
+}
+
+.cbp-spmenu-left {
+    left: -265px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+    left: 0px;
+}
+
+.cbp-spmenu-right {
+    right: -265px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+    right: 0px;
+}
+
+.cbp-spmenu, .cbp-spmenu-push {
+    
+    -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+
+.cbp-spmenu-push {
+    /*overflow-x: hidden;*/
+    position: relative;
+    left: 0;
+}
+ 
+.cbp-spmenu-push-toright {
+    left: 265px !important;
+    /*margin-left: 265px;*/
+}
+
+.cbp-spmenu-push-toleft{
+	left: -265px !important;
+}
+
+/*PANELES EXTRA*/
+
+
+
+
+ul.nav-cbp-spmenu{
+	list-style: none;
+	margin: 0;
+	padding: 0 !important;
+}
+
+
+.nav-cbp-spmenu.nav > li.active > a, .nav-cbp-spmenu.nav > li > a:hover, .nav-cbp-spmenu.nav > li > a:focus{
+	background: #353534;
+	color: #ffffff;
+}
+
+.nav-cbp-spmenu.nav > li > a, .nav-cbp-spmenu li a, .nav-cbp-spmenu li a:hover, .nav-cbp-spmenu .dropdown .dropdown-menu .nav-header{
+	background: #353534;
+	color: #aaaaaa;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    display: block;
+}
+
+.nav-cbp-spmenu .dropdown-menu > li > a:hover, .nav-cbp-spmenu .dropdown-menu > li > a:focus, .nav-cbp-spmenu .dropdown-submenu:hover > a, .nav-cbp-spmenu .dropdown-submenu:focus > a{
+	background: #353534;
+	color: #E3E3DD;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3px 60px 3px 20px;
+    display: block;
+}
+
+.nav-cbp-spmenu li.dropdown a.dropdown-toggle, .nav-cbp-spmenu .dropdown .dropdown-menu .nav-header{
+	background: #494948; /*none repeat scroll 0 0 rgba(255, 255, 255, 0.1);*/
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    line-height: 18px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    /*font-weight: bold;*/
+    margin: 0 !important;
+}
+
+.nav-cbp-spmenu .divider{
+	display: none;
+}
+
+.nav-cbp-spmenu li.dropdown .caret, .nav-cbp-spmenu li.dropdown .caret:hover{
+	border-bottom-color: #E3E3DD !important;
+    border-top-color: #E3E3DD !important;
+}
+
+.nav-cbp-spmenu .nav .dropdown-toggle:hover .caret, .nav-cbp-spmenu .nav .dropdown-toggle:focus .caret{
+	border-bottom-color: #E3E3DD !important;
+    border-top-color: #E3E3DD !important;
+}
+
+.nav-cbp-spmenu li.dropdown ul.dropdown-menu{
+	border: medium none;
+	border-radius: 0 0 0 0;
+	box-shadow: none;
+	display: block;
+	float: none;
+	padding: 0;
+	position: static;
+	margin: 0;
+}
