@@ -418,7 +418,7 @@ get_header(); ?>
 							
 							
 							<div class="progress">
-							  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" >
+							  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" >
 							    Servicios Web, REST, SOAP...
 							  </div>
 							</div>
