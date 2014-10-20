@@ -173,8 +173,11 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 
 
 		//pagination
-		function bootstrap_pagination($pages = '', $range = 2)
-		{  
+		//function bootstrap_pagination($pages = '', $range = 2)
+		
+		function bootstrap_pagination($custom_query = false)
+		{	
+			/*  
 		     $showitems = ($range * 2)+1;  
 		
 		     global $paged;
@@ -208,6 +211,45 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 		         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($pages)."'>&raquo;</a></li>";
 		         echo "</ul></div>\n";
 		     }
+		     */
+		     
+		     	if( $custom_query ){
+		     	
+		     	
+			    	$wp_query = $custom_query;
+			    	
+		     	}else{
+		     	
+		     		global $wp_query;
+			     	
+		     	}
+			 	
+												
+				$big = 999999999; // need an unlikely integer
+				$pages = paginate_links( array(
+				        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+				        'format' => '?paged=%#%',
+				        'current' => max( 1, get_query_var('paged') ),
+				        'total' => $wp_query->max_num_pages,
+				        'prev_next' => false,
+				        'type'  => 'array',
+				        'prev_next'   => TRUE,
+						'prev_text'    => __('«'),
+						'next_text'    => __('»'),
+				    ) );
+				
+				
+				if( is_array( $pages ) ) {
+				    $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+				    echo '<ul class="pagination">';
+				    foreach ( $pages as $page ) {
+				    
+				    	$extraClass = strrpos($page, "current")  ? "current active" : "";
+				    	
+				        echo '<li class="'.$extraClass.'">'.$page.'</li>';
+				    }
+				   echo '</ul>';
+				}
 		}
 
 	}
