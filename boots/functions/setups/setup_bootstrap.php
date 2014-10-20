@@ -192,7 +192,7 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 		
 		     if(1 != $pages)
 		     {
-		         echo "<div class='pagination'><ul>";
+		         echo "<div class='pagination-container'><ul class='pagination'>";
 		         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link(1)."'>&laquo;</a></li>";
 		         if($paged > 1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged - 1)."'>&lsaquo;</a></li>";
 		
