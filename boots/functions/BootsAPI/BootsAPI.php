@@ -230,6 +230,12 @@
 			if($data['user_password'] == '')
 				BootsAPI_pushError($errors, 'user_password', __('Required.','BootsAPI') );
 			
+			//El sanitize funciona estricto por defecto en wp_insert_user
+			$loginSan = sanitize_user( $data['user_login'], true );//sanitize_user( sanitize_title($data['user_login']) );//apply_filters( 'user_nicename', $data['user_login'] );//apply_filters( 'sanitize_user', $data['user_login'] );
+			
+			if($loginSan != $data['user_login'] )
+				BootsAPI_pushError($errors, 'user_login', sprintf( __('Invalid, try "%s".','BootsAPI'), $loginSan ));
+			
 			if(username_exists( $data['user_login'] ) )
 				BootsAPI_pushError($errors, 'user_login', __('Username in use.','BootsAPI') );
 			
@@ -255,7 +261,7 @@
 			if( count($errors) == 0 ){
 			
 				$userdata = array(
-				    'user_login'  =>  $data['user_login'],
+				    'user_login'  =>  $loginSan,//$data['user_login'],
 				    'user_email'  =>  $data['user_email'],
 				    'user_pass'   =>  $data['user_password'],
 				    'first_name'   =>  $data['first_name'],
@@ -285,7 +291,7 @@
 				}else{//errores desconocidos
 
 					http_response_code(403);
-					$response = array("general" => array("Error al crear el usuario"));
+					$response = array("general" => array("Failed to create user."));
 				}
 			
 			
