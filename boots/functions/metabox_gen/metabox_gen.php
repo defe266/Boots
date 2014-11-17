@@ -336,7 +336,7 @@ class My_meta_box {
 									$html .= '<p class="description">';
 									
 									if( '' == $meta ) {
-										$html .= __( 'You have no file attached to this post.', 'metabox_gen' );
+										$html .= __( 'You have no file attached to this post.', 'wpboots' );
 									} else {
 										$html .= $meta;
 									} // end if
@@ -379,7 +379,7 @@ class My_meta_box {
 									
 											echo '<input type="hidden" name="'.$field['id'].'" id="'.$field['id'].'" class="data" value="' . $meta . '">';
 											
-											echo '<a class="button" href="#">Upload/order images</a>
+											echo '<a class="button" href="#">'.__( 'Upload/order images', 'wpboots' ).'</a>
 													<br /><span class="description">'.$field['desc'].'</span>';
 												
 										echo '</div>';

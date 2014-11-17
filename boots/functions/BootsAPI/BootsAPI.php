@@ -144,10 +144,10 @@
 			
 		
 			if($data['user_login'] == '')
-				BootsAPI_pushError($errors, 'user_login', __('Required.','BootsAPI') );
+				BootsAPI_pushError($errors, 'user_login', __('Required.','wpboots') );
 				
 			if($data['user_password'] == '')
-				BootsAPI_pushError($errors, 'user_password', __('Required.','BootsAPI') );
+				BootsAPI_pushError($errors, 'user_password', __('Required.','wpboots') );
 
 			
 			
@@ -167,7 +167,7 @@
 			    
 			    	http_response_code(400);
 			    	$response = array(
-			    		"user_login" => array( __('Wrong username or password.','BootsAPI') ), //__('Wrong username or password.')
+			    		"user_login" => array( __('Wrong username or password.','wpboots') ), //__('Wrong username or password.')
 			    		"user_password" => array("")
 			    	);
 			    	//var_dump($user_signon->get_error_message());
@@ -222,37 +222,37 @@
 			
 		
 			if($data['user_login'] == '')
-				BootsAPI_pushError($errors, 'user_login', __('Required.','BootsAPI') );
+				BootsAPI_pushError($errors, 'user_login', __('Required.','wpboots') );
 				
 			if($data['user_email'] == '')
-				BootsAPI_pushError($errors, 'user_email', __('Required.','BootsAPI') );
+				BootsAPI_pushError($errors, 'user_email', __('Required.','wpboots') );
 				
 			if($data['user_password'] == '')
-				BootsAPI_pushError($errors, 'user_password', __('Required.','BootsAPI') );
+				BootsAPI_pushError($errors, 'user_password', __('Required.','wpboots') );
 			
 			//El sanitize funciona estricto por defecto en wp_insert_user
 			$loginSan = sanitize_user( $data['user_login'], true );//sanitize_user( sanitize_title($data['user_login']) );//apply_filters( 'user_nicename', $data['user_login'] );//apply_filters( 'sanitize_user', $data['user_login'] );
 			
 			if($loginSan != $data['user_login'] )
-				BootsAPI_pushError($errors, 'user_login', sprintf( __('Invalid, try "%s".','BootsAPI'), $loginSan ));
+				BootsAPI_pushError($errors, 'user_login', sprintf( __('Invalid, try "%s".','wpboots'), $loginSan ));
 			
 			if(username_exists( $data['user_login'] ) )
-				BootsAPI_pushError($errors, 'user_login', __('Username in use.','BootsAPI') );
+				BootsAPI_pushError($errors, 'user_login', __('Username in use.','wpboots') );
 			
 			if(!is_email( $data['user_email'] ) )
-				BootsAPI_pushError($errors, 'user_email', __('Invalid email.','BootsAPI') );
+				BootsAPI_pushError($errors, 'user_email', __('Invalid email.','wpboots') );
 				
 			if(email_exists( $data['user_email'] ) )
-				BootsAPI_pushError($errors, 'user_email', __('Email in use.','BootsAPI') );
+				BootsAPI_pushError($errors, 'user_email', __('Email in use.','wpboots') );
 				
 			
 			if($data['fullname_required']){
 			
 				if($data['first_name'] == '')
-					BootsAPI_pushError($errors, 'first_name', __('Required.','BootsAPI') );
+					BootsAPI_pushError($errors, 'first_name', __('Required.','wpboots') );
 				
 				if($data['last_name'] == '')
-					BootsAPI_pushError($errors, 'last_name', __('Required.','BootsAPI') );
+					BootsAPI_pushError($errors, 'last_name', __('Required.','wpboots') );
 			}
 			
 			
