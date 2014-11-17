@@ -2,8 +2,9 @@
 
 //----Dependencies----
 
-
-
+//Config
+include_once('functions/options.php');
+include_once('functions/facebook.php');
 
 //Basic libs
 include_once('functions/bootstrap/bootstrap.php');
@@ -37,6 +38,8 @@ add_action( 'bp_include', 'bp_compatibility_init' );
 include_once('functions/shortcodes.php');
 include_once('functions/metaboxes.php');
 include_once('functions/slider_gen/slider_gen.php');
+
+include_once('functions/cookieConsent/cookieConsent.php');
 
 
 //Basic Setup
