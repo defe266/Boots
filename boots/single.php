@@ -27,7 +27,7 @@ get_header(); ?>
 
 				<?php toolbox_content_nav( 'nav-above' ); ?>
 
-				<?php get_template_part( 'content', 'single' ); ?>
+				<?php get_template_part( 'content', get_post_format() );; ?>
 
 				<?php toolbox_content_nav( 'nav-below' ); ?>
 
