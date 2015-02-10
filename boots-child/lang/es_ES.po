@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Boots europatours v0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-12-18 08:34:04+0000\n"
+"Last-Translator: admin <gabriel@estudio-creativo.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:18
+#@ wpboots
+msgid "Well this is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: 404.php:22
+#: index-depre.php:64
+#@ wpboots
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
+msgstr "Parece que no podemos encontrar lo que buscas..."
+
+#: content-post-excerpt.php:23
+#, php-format
+#@ wpboots
+msgid "Permalink to %s"
+msgstr ""
+
+#: content-post-excerpt.php:73
+#: content.php:34
+#@ wpboots
+msgid ", "
+msgstr ""
+
+#: content-post-excerpt.php:79
+#: content.php:74
+#: search-tour.php:167
+#: taxonomy-excursion-type.php:106
+#: taxonomy-tour-type.php:106
+#: template-checkout-excursion.php:151
+#: template-checkout.php:155
+#: template-confirm-depre.php:122
+#: template-excursiones-index.php:100
+#: template-my-booking.php:288
+#: template-my-data.php:255
+#: template-tours-ofertas.php:108
+#: template-tours.php:90
+#@ wpboots
+msgid "Edit"
+msgstr ""
+
+#: functions/tour/tour_book.php:124
+#@ default
+msgid "Author"
+msgstr ""
+
+#: functions/tour/tour_book.php:125
+#@ default
+msgid "Nº trapsatour"
+msgstr ""
+
+#: functions/tour/tour_book.php:126
+#@ default
+msgid "Salida"
+msgstr ""
+
+#: functions/tour/tour_book.php:127
+#@ default
+msgid "Total"
+msgstr ""
+
+#: functions/tour/tour_book.php:128
+#@ default
+msgid "Estado"
+msgstr ""
+
+#: functions/tour/tour_options.php:64
+#@ default
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: functions.php:57
+#@ europetours
+msgid "User Menu"
+msgstr ""
+
+#: header.php:44
+#, php-format
+#@ wpboots
+msgid "Page %s"
+msgstr ""
+
+#: index-depre.php:60
+#: search-post.php:57
+#@ wpboots
+msgid "Nothing Found"
+msgstr ""
+
+#: search-post.php:14
+#, php-format
+#@ wpboots
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search-post.php:61
+#@ wpboots
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-my-data.php:159
+#@ profile
+msgid "Website"
+msgstr ""
+
