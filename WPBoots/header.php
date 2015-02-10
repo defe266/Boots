@@ -50,10 +50,11 @@
 
 
 <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/favicon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/favicon_57.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/favicon_72.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/favicon_144.png">
+    <link rel="shortcut icon" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-57-precomposed.png">
 
 
 <!--[if lt IE 9]>
@@ -108,41 +109,16 @@
 
 <?php wp_head(); ?>
 
-<!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
-
-
-<!--<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>/icomoon" />-->
-
-
-
-<!-- ?¿ -->
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/init.css" />
-
-<!-- ?¿ -->
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 
-<!--<script src="<?php echo get_template_directory_uri(); ?>/js/init.js" type="text/javascript"></script>-->
-
-
-
-<!--<script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/init.js" type="text/javascript"></script>-->
+<script src="<?php echo get_template_directory_uri(); ?>/js/init.js" type="text/javascript"></script>
 
 </head>
 
 <body <?php body_class(); ?>>
 
-<?php do_action( 'before' ); ?>
-
-
-<!--[if lt IE 9]>    
-    <div id="chromeframe" style="position:fixed;top:0;width:100%;z-index:9999">
-        <div class="alert alert-warning alert-dismissible" role="alert">
-		  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
-		  Está usando un navegador <strong>desactualizado</strong>. Por favor, <a target="_blank" href="http://browsehappy.com/?locale=es_ES">Actualize su navegador</a> para mejorar la experiencia.
-		</div>
-	</div>
-<![endif]-->
 
 
 
@@ -151,12 +127,8 @@
 <div class="">
     <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
         <div>
-            
-        </div>
-    </div>
-    <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
-    	
-    	<?php
+
+			<?php
 			
 				$args = array(
 					'theme_location' => 'primary',
@@ -170,7 +142,12 @@
 				wp_nav_menu($args);
 			
 			?>
-    	
+        	
+            
+        </div>
+    </div>
+    <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
+    	Hola derecho!
     </div>
 </div>
 
@@ -187,25 +164,19 @@
 
 
 
+<?php do_action( 'before' ); ?>
 
-
-	<header id="branding" class="navbar navbar-static-top cbp-spmenu-push" role="banner">	    <!--navbar-fixed-top-->
+	<header id="branding" class="navbarnavbar-static-top cbp-spmenu-push" role="banner">	    <!-- navbar-default  navbar-fixed-top-->
 	
-		<!--<div class="container">-->
+		<div class="container">
 		
-            <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">
-            	
-            	
-            	
-            	<img class="hidden-xs img-responsive" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" onerror="this.onerror=null; this.src='img/logo.png'"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-            	
-            	<img class="visible-xs img-responsive" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/logo-sm.svg" onerror="this.onerror=null; this.src='img/logo-sm.png'"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-            	
+            <a class="navbar-brand hidden-sm hidden-xs" href="<?php echo home_url( '/' ); ?>">
+            	<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>
             	<!--<img src="img/logo.svg" onerror="this.onerror=null; this.src='img/logo.png'"  alt="logo">-->
             </a>
             
             
-            <button type="button" class="navbar-toggle pull-right visible-md visible-sm visible-xs" id="cbp-spmenu-btn-right">
+            <button type="button" class="navbar-toggle pull-left visible-sm visible-xs" id="cbp-spmenu-btn-left">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -228,7 +199,7 @@
 						'depth'		 => 3,
 						'container'	 => false,
 						'menu_id'    => 'nav-main',
-						'menu_class' => 'nav navbar-nav hidden-md hidden-sm hidden-xs',// nav-pills hidden-sm hidden-xs
+						'menu_class' => 'nav navbar-nav hidden-sm hidden-xs',// nav-pills hidden-sm hidden-xs
 						'walker'	 => new Bootstrap_Walker_Nav_Menu()
 					);//<ul id="%1$s" class="%2$s">%3$s</ul>
 
@@ -248,85 +219,11 @@
             </div><!--/.nav-collapse -->
             
             
-            <div class="pull-right">
             
-            	<?php
-            	
-            		if ( is_user_logged_in() ) :
-	               		
-               			$current_user = wp_get_current_user();
-						//$user_id = $current_user->ID;
-						//$categorias = get_terms('archivo_personal-type','orderby=id&hide_empty=1');
-            	?>
-            	
-            		<ul class="nav navbar-right" id="nav-user"><!--nav-pills-->
-						<li class="dropdown">
-						
-							<a data-toggle="dropdown" class="dropdown-toggle user-display" role="button" href="#">
-								<div class="user-avatar-container">
-									<?php echo get_avatar($current_user->ID); ?>
-								</div>
-							
-								<span class="alias"><?php echo $current_user->user_login; ?> <b class="caret"></b></span>
-							</a>
-
-							<ul role="menu" class="dropdown-menu">
-								<!--<li role="presentation" class="dropdown-header">User Options</li>-->
-								<!--
-								<li role="presentation"><a href="" role="menuitem" tabindex="-1"> <i class="icon icon-suitcase"></i>&nbsp;  Mis reservas</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href=""> <i class="icon icon-user"></i> &nbsp; Mis datos</a></li>
-								-->
-								<?php
-								
-				                	//wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) );
-									//<ul id="%1$s" class="%2$s">%3$s</ul>
-				
-									wp_nav_menu(array(
-										'theme_location' => 'user',
-										'depth'		 => 2,
-										'container'	 => false,
-										'items_wrap' => '%3$s'
-									));
-								?>	
-
-								<li role="presentation" class="divider"></li>
-								
-								<li role="presentation"><a tabindex="-1" role="menuitem" class="logout" href="<?php echo wp_logout_url( get_permalink() ); ?>"> <span class="icon icon-power-off"></span>  &nbsp; Salir</a></li>
-							</ul>
-						</li>
-					</ul>
-
-		        		
-	        		
-				<?php else : ?>
-	
-					<ul id="nav-login" class="nav nav-pills" role="navigation">
-		       			<!-- Button to trigger modal -->
-		           		
-		           		<li>
-							<a href="#login" data-toggle="modal">Entrar</a>
-						</li>
-						
-						<li>
-		           			<a href="#register" class="btn-blue" role="button" data-toggle="modal">Registro</a>
-		           		</li>
-					</ul>	
-							
-				<?php endif; ?>
-
-            
-	        	
-			</div>
-            
-            
-            
-       <!-- </div>-->
-        
-        
-        						
+        </div>
 	
 	</header><!-- #branding -->
-
+	
 	
 
 	<div id="main">

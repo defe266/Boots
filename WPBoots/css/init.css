@@ -1,0 +1,206 @@
+
+
+
+
+
+/*--- WP Default ---*/
+
+.wp-caption {
+	padding: .5em;
+	text-align: center;
+}
+.wp-caption img {
+	margin: .25em;
+}
+.wp-caption .wp-caption-text {
+	margin: .5em;
+	color: #999999;
+}
+
+.gallery-caption {
+}
+
+.sticky {
+}
+
+.bypostauthor{
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-bottom: 20px;
+    margin-right: 20px;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-bottom: 20px;
+    margin-left: 20px;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+/*
+.clear{
+	clear: both;
+}*/
+
+
+/*----- elastislide ------*/
+
+.elastislideContainer{
+	margin: 40px 0px;
+}
+
+.elastislide-horizontal ul li{
+	position: relative;
+}
+
+.elastislideContainer li h4 {
+  bottom: 7px;
+  left: 0;
+  margin: 0px;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+.elastislideContainer li h4 a {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  margin: 0 2px;
+  line-height: 40px;
+}
+
+
+
+/*----GALLERY----*/
+.Gallery_item{
+	margin-bottom: 20px;
+}
+
+.Gallery_item img{
+	display: block;
+}
+
+
+.gallery .row-fluid:last-child .Gallery_item{
+	margin-bottom: 0px;
+}
+
+.Gallery-quote{
+	color: #888888;
+    display: block;
+    font-size: 12px;
+    padding: 10px 0px;
+}
+
+
+/*-- Desactivate IE filters --*/
+
+.navbar-inner{
+	filter: none;
+}
+
+
+
+/*--CUSTOM FIXES--*/
+
+/*-----IE-----*/
+/*.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
+	filter: none;
+}*/
+
+
+/*-----HEAD----*/
+
+
+
+
+
+/*############# Media queries #############*/
+
+@media (max-width: 979px){
+	/*
+	body{
+		padding: 0px !important;
+	}
+	*/
+	/*
+	#branding{
+	    height: auto;
+
+	}
+	
+	.navbar .nav > li > .dropdown-menu:after, .navbar .nav > li > .dropdown-menu:before{
+		display: none;
+	}
+	
+	.dropdown-submenu > a:after{
+		display: none;
+	}
+	
+	
+	.nav > li.active > a, .nav > li > a:hover, .nav > li > a:focus{
+		color: #ffffff !important;
+	}*/
+}
+
+
+
+@media (max-width: 767px) {
+/*
+	
+	.container{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	
+	.img-borders-container{
+		text-align: center;
+	}
+	
+	.img-borders{
+		display: inline-block;
+		max-width: 100%;
+	}
+	*/
+	/*----GALLERY----*/
+	
+	.Gallery_item img{
+		margin: auto;
+	}
+	
+	.gallery .row-fluid:last-child .Gallery_item{
+		margin-bottom: 20px;
+	}
+	
+	/*----- Portfolio ------*/
+	
+	.project img{
+		margin: auto;
+	}
+	
+	/*----- elastislide ------*/
+		
+	.elastislideContainer li h4{
+		font-size: 14px;
+	}
+		
+}
+
+@media (min-width: 1200px) {
+	/*----GALLERY----*/
+	.Gallery_item{
+		margin-bottom: 30px;
+	}
+}

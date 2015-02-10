@@ -9,6 +9,7 @@
 
 get_header(); ?>
 
+
 <?php
 	$slider_id = get_post_meta(get_the_ID(), 'wpbootstrap_slider', true);
 

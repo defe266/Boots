@@ -50,11 +50,11 @@
 
 
 <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="<?php bloginfo( 'template_url' );?>/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo( 'template_url' );?>/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo( 'template_url' );?>/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo( 'template_url' );?>/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'template_url' );?>/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-57-precomposed.png">
 
 
 <!--[if lt IE 9]>
@@ -169,11 +169,18 @@
 	<header id="branding" class="navbarnavbar-static-top cbp-spmenu-push" role="banner">	    <!-- navbar-default  navbar-fixed-top-->
 	
 		<div class="container">
-		
-            <a class="navbar-brand hidden-sm hidden-xs" href="<?php echo home_url( '/' ); ?>">
-            	<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>
-            	<!--<img src="img/logo.svg" onerror="this.onerror=null; this.src='img/logo.png'"  alt="logo">-->
+
+            
+            <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">
+            	            	
+            	
+            	<!--<img class="hidden-xs img-responsive" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" onerror="this.onerror=null; this.src='img/logo.png'"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            	
+            	<img class="visible-xs img-responsive" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/logo-sm.svg" onerror="this.onerror=null; this.src='img/logo-sm.png'"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">-->
+            	
+
             </a>
+            
             
             
             <button type="button" class="navbar-toggle pull-left visible-sm visible-xs" id="cbp-spmenu-btn-left">
