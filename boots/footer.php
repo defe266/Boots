@@ -15,19 +15,19 @@
 		<div id="footer_content">
 			<div class="container">
 				<div class="row">
-					<div class="span4">
+					<div class="col-md-4">
 
 						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-1') ) : ?>
 			            <?php endif; ?>
 
 					</div>
-					<div class="span4">
+					<div class="col-md-4">
 
 						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-2') ) : ?>
 			            <?php endif; ?>
 
 					</div>
-					<div class="span4">
+					<div class="col-md-4">
 
 						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-3') ) : ?>
 			            <?php endif; ?>
@@ -45,9 +45,9 @@
 		
 		<div id="creditos">
 			<div class="container">
-				<div class="designed-by-ec">
+				<!--<div class="designed-by-ec">
 				      <a href="http://www.estudio-creativo.com">Designed by Estudio Creativo</a>
-			    </div>
+			    </div>-->
 			</div>
 		</div>
 	

@@ -100,7 +100,7 @@
 				    <table class="form-table">
 				    
 				    	<tr valign="top">
-				        	<th scope="row">Ruta "checkout excursiones"</th>
+				        	<th scope="row">Ruta "política de cookies"</th>
 				       		<td>
 				        
 					        	<?php 

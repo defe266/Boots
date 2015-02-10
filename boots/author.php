@@ -37,7 +37,7 @@ get_header(); ?>
 					rewind_posts();
 				?>
 
-				<?php toolbox_content_nav( 'nav-above' ); ?>
+				<?php //toolbox_content_nav( 'nav-above' ); ?>
 				
 				<div class="row">
 					<?php /* Start the Loop */ ?>
@@ -54,7 +54,8 @@ get_header(); ?>
 					<?php endwhile; ?>
 				</div>
 				
-				<?php toolbox_content_nav( 'nav-below' ); ?>
+				<?php //toolbox_content_nav( 'nav-below' ); ?>
+				<?php bootstrap_pagination(); ?>
 
 			<?php else : ?>
 

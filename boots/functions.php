@@ -11,6 +11,7 @@ include_once('functions/bootstrap/bootstrap.php');
 
 include_once('functions/metabox_gen/metabox_gen.php');
 include_once('functions/fancybox/fancybox.php');
+include_once('functions/masonry/masonry.php');
 include_once('functions/stacktable/stacktable.php');
 include_once('functions/elastislide/elastislide.php');
 include_once('functions/functions_lib.php');

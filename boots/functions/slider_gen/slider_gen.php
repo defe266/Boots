@@ -61,7 +61,7 @@ add_filter( 'attachment_fields_to_save', function ( $post, $attachment ) {
 }, 10, 2 );
 
 
-
+/*
 function slider_archive_enqueue(){
 		
 	wp_enqueue_script("sliderGen", get_bloginfo( 'template_url' ).'/functions/slider_gen/js/sliderGen.js', array('jquery'));
@@ -78,7 +78,7 @@ function slider_archive_enqueue(){
 	);
 }
 
-
+*/
 
 //shortcode que introduce el slider
 function short_slider($atts) 
@@ -86,25 +86,56 @@ function short_slider($atts)
 	
 	global $wpdb;
 	
-	slider_archive_enqueue();
+	//slider_archive_enqueue();
 
 	extract( shortcode_atts( array(
       'slug' => '',
-      'id' => ''
+      'id' => '',
+      'gallery' => '',
+      'size' => 'full',
+      'background' => 'false'
       ), $atts ) );
 
 	
-	
+
 
 	//buscaoms la id por la slug	
-	if($id == '')
+	if($slug != '')
 	{
 		$pageid_name = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$slug."'");
+		$attachs = explode(',', get_post_meta($pageid_name, 'slider_gallery', true));	
 	}
-	else
+	
+	if($id != '')
 	{
+	
 		$pageid_name = $id;
+		$attachs = explode(',', get_post_meta($pageid_name, 'slider_gallery', true));	
 	}
+	
+	if($gallery != '')
+	{
+
+		$attachs = explode(',', $gallery);	
+	}
+	
+	
+	
+	
+	/*
+		
+		$attachs = explode(',',$galleryIDs);
+	
+	
+	
+	//mostramos las imágenes actuales con sus clicks		
+					
+	$i = 0;
+
+	foreach ($attachs as $att_id){
+		
+	*/
+	
 	
 		
 	/*
@@ -119,7 +150,7 @@ function short_slider($atts)
 						));
 	*/
 	
-	$attachs = explode(',', get_post_meta($pageid_name, 'slider_gallery', true));	
+	
 	
 	
 	$output = '<div class="carousel slide" id="myCarousel-'.$pageid_name.'">
@@ -142,15 +173,15 @@ function short_slider($atts)
 			$active = "";
 		}
 	
-		$img = wp_get_attachment_image_src($att_ID, "full");//$large_thumbnail_size) //medium large
+		$img = wp_get_attachment_image_src($att_ID, $size);//$large_thumbnail_size) //medium large
 
 		
 		$url = get_post_meta($att_ID, 'url-link', true);
-		$title = $att->post_title;
+		$title = $att->post_excerpt;//post_title;
 		$content = $att->post_content;
 		
 		
-		if($title == '*') $title = '';
+		//if($title == '*') $title = '';
 		
 		
 		//si no hay contenido ni titulo no colocamos el caption
@@ -168,16 +199,29 @@ function short_slider($atts)
 		//$caption = '';
 		
 		
+		if($atts["background"] == "true"){
+		
+			$imgItem = '<div class="item-img" style="background: url(\''.$img[0].'\') no-repeat center center transparent; background-size: cover; width:100%; min-height:400px;"></div>';
+			
+		}else{
+			
+			$imgItem = '<img alt="" src="'.$img[0].'">';
+		}
+		
+		
+		
+		
 		if($url == ''){
 		
 			$output .=	'<div class="item '.$active.'">
-				            <img alt="" src="'.$img[0].'">
+				            '.$imgItem.'
 				            '.$caption.'
 				          </div>';
 		}else{
 			//onclick="WPBannerizeJavascript.incrementClickCount(3)"
+			//onclick="sliderGen.incrementClickCount('.$att_ID.')
 						$output .=	'<div class="item '.$active.'">
-				            <a target="_blank" onclick="sliderGen.incrementClickCount('.$att_ID.')" href="'.$url.'"><img alt="" src="'.$img[0].'">
+				            <a target="_blank" " href="'.$url.'">'.$imgItem.' 
 				            '.$caption.'</a>
 				          </div>';
 		}
