@@ -98,6 +98,8 @@
 			array(
 				'site_url' => site_url(),
 				'home_url' => home_url(),
+				'template_directory' => get_bloginfo('template_directory'),
+				'stylesheet_directory' => get_bloginfo( 'stylesheet_directory' ),
 				'lang' => get_bloginfo("language")
 			)
 		);	
