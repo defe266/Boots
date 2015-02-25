@@ -53,8 +53,10 @@ class My_meta_box {
 				wp_enqueue_style( 'chosen', get_template_directory_uri().'/functions/metabox_gen/lib/chosen/chosen.min.css');
 				wp_enqueue_script('chosen', get_template_directory_uri().'/functions/metabox_gen/lib/chosen/chosen.jquery.min.js', array('jquery') );
 				
+				wp_enqueue_script( 'googlemaps_places', 'http://maps.googleapis.com/maps/api/js?libraries=places' );
 				
-				wp_enqueue_script('custom-js', get_template_directory_uri().'/functions/metabox_gen/js/custom-js.js', array('chosen','jquery-ui-datepicker'));
+				
+				wp_enqueue_script('custom-js', get_template_directory_uri().'/functions/metabox_gen/js/custom-js.js', array('chosen','jquery-ui-datepicker', 'googlemaps_places'));
 				wp_enqueue_style('jquery-ui-custom', get_template_directory_uri().'/functions/metabox_gen/css/jquery-ui-custom.css');
 
 				
@@ -370,7 +372,7 @@ class My_meta_box {
 										echo '</select><br /><span class="description">'.$field['desc'].'</span>';
 								break;
 								
-								
+								//galería de fotos integrada con wp
 								case 'gallery':
 									
 									//$meta && in_array($option->ID, $meta) ? ' checked="checked"' : ''
@@ -381,6 +383,29 @@ class My_meta_box {
 											
 											echo '<a class="button" href="#">'.__( 'Upload/order images', 'wpboots' ).'</a>
 													<br /><span class="description">'.$field['desc'].'</span>';
+												
+										echo '</div>';
+
+								break;
+								
+								//selector de dirección integrado con google maps
+								case 'address':
+									
+									//$meta && in_array($option->ID, $meta) ? ' checked="checked"' : ''
+									
+										echo '<div class="metabox_address">';
+																				
+											echo   '<input type="hidden" name="'.$field['id'].'[address]" id="'.$field['id'].'" class="data address" value="' . $meta["address"] . '">
+													<input type="hidden" name="'.$field['id'].'[name]" class="data name" value="' . $meta["name"] . '">
+													<input type="hidden" name="'.$field['id'].'[vicinity]" class="data vicinity" value="' . $meta["vicinity"] . '">
+													<input type="hidden" name="'.$field['id'].'[lat]" class="data lat" value="' . $meta["lat"] . '">
+													<input type="hidden" name="'.$field['id'].'[lng]" class="data lng" value="' . $meta["lng"] . '">';		
+													
+													
+											
+											echo '<input type="text" class="form-control address-input" placeholder="Ej: Toledo" value="'.$meta["address"].'" autocomplete="off"/>';
+											
+											echo '<br /><span class="description">'.$field['desc'].'</span>';
 												
 										echo '</div>';
 
@@ -458,6 +483,16 @@ class My_meta_box {
 								
 								continue;
 							}
+							
+							
+							//si es de tipo address
+							/*
+							if($field['type'] == 'address'){
+							
+								
+							}*/
+							
+							
 
 							
 							

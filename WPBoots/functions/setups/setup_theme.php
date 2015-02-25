@@ -376,16 +376,18 @@ function toolbox_enhanced_image_navigation( $url ) {
 
 //Enqueue jquery from google CDN with local fallback
 
-$url = 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js'; // the URL to check against  
+$url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'; // the URL to check against   //1.8.0
 $test_url = @fopen($url,'r'); // test parameters
 
 // test if the URL exists
 if($test_url !== false) 
 {
 
+
+
     function load_external_jQuery() { // load external file  
         wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery  
-        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js'); // register the external file  
+        wp_register_script('jquery', "http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"); // register the external file  
         wp_enqueue_script('jquery'); // enqueue the external file  
     }
     
@@ -397,7 +399,7 @@ else
 
     function load_local_jQuery() {  
         wp_deregister_script('jquery'); // deregisters the default WordPress jQuery
-        wp_register_script('jquery', get_bloginfo('template_url').'/js/jquery-1.8.0.min.js', __FILE__, false, '1.8.0', true); // register the local file  
+        wp_register_script('jquery', get_bloginfo('template_url').'/js/jquery.min.js', __FILE__, false, '1.11.2', true); // register the local file  
         wp_enqueue_script('jquery'); // enqueue the local file  
     }
 

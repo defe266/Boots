@@ -195,6 +195,63 @@ jQuery(function($) {
 	
 	
 	
+	//## address
+	
+	
+	
+	$('.metabox_address').each(function(){
+	
+		var addressElm = $(this);
+		var inputElm = addressElm.find('.address-input');
+		
+		inputElm.width(400);
+		
+		console.log('address-input',inputElm);
+		
+		
+		var autocomplete = new google.maps.places.Autocomplete(
+		
+			inputElm[0],
+		  //(inputElm[0]),//autocomplete //document.getElementById('metabox_destinos_destino')
+		  
+		  	{ types: ['geocode'] }
+		);
+		
+		// When the user selects an address from the dropdown
+		google.maps.event.addListener(autocomplete, 'place_changed', function() {
+		
+			//console.log("autocomplete",autocomplete);
+		
+			console.log("place",autocomplete.getPlace());
+			
+			var place = autocomplete.getPlace();
+			var location = place.geometry.location;
+			
+			//console.log("latlong",location.lat(),location.lng());
+			
+			addressElm.find('.address').val(place.formatted_address);
+			
+			
+			addressElm.find('.name').val(place.name);
+			//addressElm.find('.province').val(place.address_components[1]);
+			if(place.vicinity) addressElm.find('.vicinity').val(place.vicinity);
+
+			if(location.lat()) addressElm.find('.lat').val(location.lat());
+			if(location.lng()) addressElm.find('.lng').val(location.lng());
+			
+			/*
+			addressElm.find('input[name="address"]').val(place.formatted_address;);
+			addressElm.find('input[name="lat"]').val(location.lat());
+			addressElm.find('input[name="lng"]').val(location.lng());
+			*/
+		});
+		
+		
+	});
+	
+	
+	
+	
 	
 	
 
