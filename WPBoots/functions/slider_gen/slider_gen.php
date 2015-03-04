@@ -80,6 +80,12 @@ function slider_archive_enqueue(){
 
 */
 
+
+function slider_init_enqueue(){
+		
+	wp_enqueue_script("sliderInit", get_bloginfo( 'template_url' ).'/functions/slider_gen/js/init.js', array('jquery'));
+}
+
 //shortcode que introduce el slider
 function short_slider($atts) 
 {
@@ -97,6 +103,7 @@ function short_slider($atts)
       ), $atts ) );
 
 	
+	slider_init_enqueue();
 
 
 	//buscaoms la id por la slug	
