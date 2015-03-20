@@ -377,7 +377,7 @@ function short_banners($atts,$content) {
     $output = '';
     
     
-    $output .= '<section id="banners_section" class="row-fluid">';
+    $output .= '<section id="banners_section" class="row">';
 					
 
 		query_posts( array( 'post_type' => 'banner', 'banner-type' => $category, 'posts_per_page' => $columns, 'orderby' => 'menu_order', 'order' => 'DESC') );
@@ -388,7 +388,7 @@ function short_banners($atts,$content) {
 			$bannerURL = get_post_meta($post->ID, 'wpb_banners_url', true);
 
 
-			$output .= '<div class="span'.$span_cols.'">
+			$output .= '<div class="col-sm-'.$span_cols.' col-md-'.$span_cols.'">
 							<div class="banner">
 								<div class="img-borders-container">
 										<div class="img-borders img-polaroid">

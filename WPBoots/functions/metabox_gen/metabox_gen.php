@@ -155,7 +155,9 @@ class My_meta_box {
 							switch($field['type']) {
 								// text
 								case 'text':
-									echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="30" />
+								
+									$size = (isset($field["size"])) ? $field["size"] : 30;
+									echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="'.$size.'" />
 											<br /><span class="description">'.$field['desc'].'</span>';
 								break;
 								// textarea
