@@ -2,17 +2,8 @@
 
 /*Custom post*/
 $args_labels = array(
-	  'name' => __('Projects', 'wpboots'),
-	  'singular_name' => __('Project', 'wpboots'),
-	  'add_new' => __('Add project', 'wpboots'),
-	  'add_new_item' => __('Add project', 'wpboots'),
-	  'edit_item' => __('Edit project', 'wpboots'),
-	  'new_item' => __('Add project', 'wpboots'),
-	  'view_item' => __('See proyect', 'wpboots'),
-	  'search_items' => __('Find project', 'wpboots'),
-	  'not_found' =>  __('No projects', 'wpboots'),
-	  'not_found_in_trash' => __('No projects', 'wpboots'),
-	  'parent_item_colon' => ''
+	  'name' => 'Proyectos',
+	  'singular_name' => 'Proyecto'
 	  );
 	  
 	  $args = array(

@@ -25,14 +25,6 @@ include_once('functions/BootsAPI/BootsAPI.php');
 
 
 
-//include_once('functions/bp/bp-functions.php' ); //compatibilidad con Buddypress
-/* Only load code that needs BuddyPress to run once BP is loaded and initialized. */
-
-function bp_compatibility_init() {
-    include_once('functions/bp/bp-functions.php' );
-}
-add_action( 'bp_include', 'bp_compatibility_init' );
-
 
 
 //Avanced libs
@@ -47,7 +39,7 @@ include_once('functions/cookieConsent/cookieConsent.php');
 include_once('functions/setups/setup_theme.php');
 include_once('functions/setups/setup_bootstrap.php');
 include_once('functions/setups/setup_banners.php');
-include_once('functions/setups/setup_portfolio.php');
+//include_once('functions/setups/setup_portfolio.php');
 
 
 ///----Dependencies----

@@ -328,7 +328,7 @@ function adjacent_post_link_plus($args = '', $format = '%link &raquo;', $previou
 	foreach ( $posts as $post ) {
 		$title = $post->post_title;
 		if ( empty($post->post_title) )
-			$title = $previous ? __('Previous Post') : __('Next Post');
+			$title = $previous ? __('Previous Post','wpboots') : __('Next Post','wpboots');
 
 		$title = apply_filters('the_title', $title, $post->ID);
 		$date = mysql2date($r['date_format'], $post->post_date);

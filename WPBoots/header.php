@@ -79,7 +79,7 @@
 		<?php
 		$thumb = wp_get_attachment_image_src($thumb[0], false);
 		$thumb = $thumb[0];
-		$default_img = get_bloginfo('stylesheet_directory').'/imagenes/imagen_por_defecto.png';
+		$default_img = get_bloginfo('stylesheet_directory').'/img/logo.png';
 	 
 		?>
 	 

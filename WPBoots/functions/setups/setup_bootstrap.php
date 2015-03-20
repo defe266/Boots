@@ -234,8 +234,8 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 				        'prev_next' => false,
 				        'type'  => 'array',
 				        'prev_next'   => TRUE,
-						'prev_text'    => __('«'),
-						'next_text'    => __('»'),
+						'prev_text'    => __('«','wpboots'),
+						'next_text'    => __('»','wpboots'),
 				    ) );
 				
 				
