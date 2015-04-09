@@ -27,7 +27,7 @@ register_post_type('project',$args);
 
 
 /*Custom taxonomy*/
-register_taxonomy("project-type", array("project"), array("hierarchical" => true, "label" => __("Project types", 'wpboots'), "singular_label" => __("Project type", 'wpboots'), "rewrite" => true)); 
+register_taxonomy("project-type", array("project"), array("hierarchical" => true, "label" => "Project types", 'wpboots', "singular_label" => "Project type", 'wpboots', "rewrite" => true)); 
 
 
 

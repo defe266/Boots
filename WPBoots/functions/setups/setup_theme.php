@@ -64,7 +64,7 @@ function toolbox_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'wpboots' ),
+		'primary' => 'Primary Menu',
 	) );
 
 	/**
@@ -102,14 +102,14 @@ add_filter( 'wp_page_menu_args', 'toolbox_page_menu_args' );
  */
 function toolbox_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Sidebar 1', 'wpboots' ),
+		'name' => 'Sidebar 1',
 		'id' => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-
+/*
 	register_sidebar( array(
 		'name' => __( 'Sidebar 2', 'wpboots' ),
 		'id' => 'sidebar-2',
@@ -119,11 +119,11 @@ function toolbox_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-	
+*/	
 	register_sidebar( array(
-		'name' => __( 'Footer 1', 'wpboots' ),
+		'name' => 'Footer 1',
 		'id' => 'footer-1',
-		'description' => __( 'Footer area', 'wpboots' ),
+		'description' => 'Footer area',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget' => "</section>",
 		'before_title' => '<h3 class="widget-title">',
@@ -131,9 +131,9 @@ function toolbox_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name' => __( 'Footer 2', 'wpboots' ),
+		'name' => 'Footer 2',
 		'id' => 'footer-2',
-		'description' => __( 'Footer area', 'wpboots' ),
+		'description' => 'Footer area',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget' => "</section>",
 		'before_title' => '<h3 class="widget-title">',
@@ -141,9 +141,9 @@ function toolbox_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name' => __( 'Footer 3', 'wpboots' ),
+		'name' => 'Footer 3',
 		'id' => 'footer-3',
-		'description' => __( 'Footer area', 'wpboots' ),
+		'description' => 'Footer area', 'wpboots',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget' => "</section>",
 		'before_title' => '<h3 class="widget-title">',
@@ -163,7 +163,7 @@ function toolbox_content_nav( $nav_id , $args = null ) {
 
 	?>
 	<nav id="<?php echo $nav_id; ?>">
-		<!--<h4 class="assistive-text section-heading"><?php _e( 'Post navigation', 'wpboots' ); ?></h4>-->
+
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
@@ -171,8 +171,8 @@ function toolbox_content_nav( $nav_id , $args = null ) {
 		
 			<?php
 			
-				$prevArgs = array('format' => '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'wpboots' ) . '</span> %title');
-				$nextArgs = array('format' => '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'wpboots' ) . '</span>');
+				$prevArgs = array('format' => '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . '&larr;' . '</span> %title');
+				$nextArgs = array('format' => '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">' . '&rarr;' . '</span>');
 				
 				if(isset($args)){
 				
@@ -227,7 +227,7 @@ function toolbox_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'wpboots' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'wpboots' ), ' ' ); ?></p>
+		<p><?php _e( 'Pingback:', 'wpboots' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( '(Edit)', ' ' ); ?></p>
 	<?php
 			break;
 		default :

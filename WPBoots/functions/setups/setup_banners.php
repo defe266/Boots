@@ -1,24 +1,12 @@
 <?php
 
 /*Custom post*/
-$args_labels = array(
-	  'name' => __('Banners', 'wpboots'),
-	  'singular_name' => __('Banner', 'wpboots'),
-	  'add_new' => __('Add banner', 'wpboots'),
-	  'add_new_item' => __('Add banner', 'wpboots'),
-	  'edit_item' => __('Edit banner', 'wpboots'),
-	  'new_item' => __('Add banner', 'wpboots'),
-	  'view_item' => __('See proyecto', 'wpboots'),
-	  'search_items' => __('Find banner', 'wpboots'),
-	  'not_found' =>  __('No banners', 'wpboots'),
-	  'not_found_in_trash' => __('No banners', 'wpboots'),
-	  'parent_item_colon' => ''
-	  );
-	  
+
 	  $args = array(
-	    'labels' => $args_labels,
-	    'public' => true,
-	    'publicly_queryable' => true,
+	    //'labels' => $args_labels,
+	    'label' => 'Banners',// ocultamos de front y back -> con show_ui la reactivamos para el admin
+	    'public' => false,
+	    //'publicly_queryable' => true,
 	    'show_ui' => true,
 	    'query_var' => true,
 	    'rewrite' => true,
@@ -26,17 +14,13 @@ $args_labels = array(
 	    'hierarchical' => true,
 	    'menu_position' => 20, // 5 - below Posts, 10 - below Media, 20 - below Pages, 60 - below first separator, 100 - below second separator
 	    'supports' => array('title','editor','thumbnail', 'page-attributes'),//thumbnail editor
-	  'rewrite' => array(
-	    'slug' => 'banner',
-	    'with_front' => FALSE
-	  )
 	);
 
 register_post_type('banner',$args);
 
 
 /*Custom taxonomy*/
-register_taxonomy("banner-type", array("banner"), array("hierarchical" => true, "label" => __("banner types", 'wpboots'), "singular_label" => __("banner type", 'wpboots'), "rewrite" => true)); 
+register_taxonomy("banner-type", array("banner"), array("hierarchical" => true, "label" => "banner types", 'wpboots', "singular_label" => "banner type", 'wpboots', "rewrite" => true)); 
 
 
 
