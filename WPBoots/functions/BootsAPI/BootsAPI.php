@@ -105,7 +105,7 @@
 		);	
 	}
 
-	BootsAPI_enqueue();
+	add_action( 'wp_enqueue_scripts', 'BootsAPI_enqueue' );
 	
 	
 	

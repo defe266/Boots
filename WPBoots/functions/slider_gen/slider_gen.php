@@ -122,7 +122,7 @@ function short_slider($atts)
 	
 	if($gallery != '')
 	{
-
+		$pageid_name = $gallery;
 		$attachs = explode(',', $gallery);	
 	}
 	

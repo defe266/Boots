@@ -213,7 +213,8 @@ class My_meta_box {
 								case 'post_list':
 								$items = get_posts( array (
 									'post_type'	=> $field['post_type'],
-									'posts_per_page' => -1
+									'posts_per_page' => -1,
+									'suppress_filters' => false
 								));
 									echo '<select name="'.$field['id'].'" id="'.$field['id'].'"  ' , $field['chosen'] ? 'class="chosen"' : '' , '>
 											<option value="">Select One</option>'; // Select One
@@ -272,7 +273,8 @@ class My_meta_box {
 								
 									$items = get_posts( array (
 										'post_type'	=> $field['post_type'],
-										'posts_per_page' => -1
+										'posts_per_page' => -1,
+										'suppress_filters' => false
 									));
 									
 									//var_dump($items);
@@ -358,10 +360,23 @@ class My_meta_box {
 								
 									$items = get_posts( array (
 										'post_type'	=> $field['post_type'],
-										'posts_per_page' => -1
+										'posts_per_page' => -1,
+										'suppress_filters' => false
 									));
+									/*
+									//#si estamos en un entorno multiidioma
+									if(function_exists("wpml_get_language_information")){
 									
+										global $sitepress;
+										$current_lang = $sitepress->get_current_language(); //save current language
+										
+										var_dump($current_lang);
 									
+										$wpml_post_info = wpml_get_language_information($post->ID);
+										var_dump( substr($wpml_post_info["locale"],0,2) );
+									}
+									
+									*/
 									
 									//$meta && in_array($option->ID, $meta) ? ' checked="checked"' : ''
 									
