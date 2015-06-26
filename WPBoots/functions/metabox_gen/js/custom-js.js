@@ -193,6 +193,67 @@ jQuery(function($) {
 	});
 	
 	
+	//## file
+	
+	
+	
+	$('.metabox_file').each(function(){
+	
+		var elm = $(this);
+	
+		var data = elm.find('.data').val();
+		
+		if(data != ''){
+			
+			elm.addClass('selected');
+		}
+
+		
+		var mediaView = wp.media({
+		
+		        id:         'my-frame',          
+		        frame:      'post',
+		        //state:      'insert',
+		        //title:      wp.media.view.l10n.editGalleryTitle,
+		        //library : { type : 'image'},
+		        editing:    false,
+		        multiple:   false
+		    });
+	
+	
+	
+		//# abrimos la ventana
+		elm.find('.button-upload').on('click',function(e){
+		
+			e.preventDefault();
+			
+			mediaView.open();
+		});
+		elm.find('.button-delete').on('click',function(e){
+		
+			e.preventDefault();
+			
+			elm.find('.data').val("");
+			elm.removeClass('selected');
+		});
+		
+		//# guardamos los datos
+		mediaView.on('insert', function(collection){
+		
+			collection = collection.toJSON();
+			var item = collection[0];
+			
+			elm.find('.selected').attr('href',item.url);
+			elm.find('.selected').text(item.filename);
+			elm.find('.data').val(item.id);
+			
+			elm.addClass('selected');
+
+		});
+	
+	});
+	
+	
 	
 	
 	//## address

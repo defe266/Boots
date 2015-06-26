@@ -87,4 +87,37 @@ function wpboots_printColClearfix($xs,$sm,$md,$lg,$pos){
 	}
 }
 
+
+//# funciones auxiliares para obtener urls de paginas adaptadas por wpml en caso de existir
+
+function wpboots_page_permalink($value, $tipeValue = 'slug'){
+
+	$protoID = 0;
+	
+	if($tipeValue == 'slug'){
+	
+		$page = get_page_by_path( $value );
+		$protoID = $page->ID;
+	}
+	
+	if($tipeValue == 'id'){
+	
+		$protoID = $value;
+	}
+
+					
+	$pageid = ( function_exists('icl_object_id') ) ? icl_object_id($protoID,'page',true) : $protoID;
+	
+	return get_permalink( $pageid );
+}
+
+//# funciones auxiliares para obtener posts adaptados por wpml en caso de existir
+
+function wpb_get_post($protoID, $post_type = 'post'){
+				
+	$pageid = ( function_exists('icl_object_id') ) ? icl_object_id($protoID,$post_type,true) : $protoID;
+	
+	return get_post( $pageid );
+}
+
 ?>

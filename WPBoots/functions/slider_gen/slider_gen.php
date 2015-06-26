@@ -160,7 +160,7 @@ function short_slider($atts)
 	
 	
 	
-	$output = '<div class="carousel slide" id="myCarousel-'.$pageid_name.'">
+	$output = '<div class="carousel slide" id="myCarousel-'.$pageid_name.'" data-ride="carousel">
 					<div class="carousel-inner">';
 					
 	$i = 0;

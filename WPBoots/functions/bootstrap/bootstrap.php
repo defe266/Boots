@@ -89,7 +89,7 @@
 			        'type'  => 'array',
 			        'prev_next'   => TRUE,
 					'prev_text'    => '«',//__('«','wpboots'),
-					'next_text'    => '»',//__('»','wpboots'),
+					'next_text'    => '»'//__('»','wpboots'),
 			    ) );
 			
 			
@@ -97,6 +97,9 @@
 			    $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
 			    echo '<ul class="pagination">';
 			    foreach ( $pages as $page ) {
+			    
+			    	//if(strpos($page, 'prev') !== false) $page = substr_replace($page,' rel="prev" ',2,1);
+				    //if(strpos($page, 'next') !== false) $page = substr_replace($page,' rel="next" ',2,1);
 			    
 			    	$extraClass = strrpos($page, "current")  ? "current active" : "";
 			    	

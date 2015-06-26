@@ -1,0 +1,35 @@
+/*
+
+.custom_meta_box{
+	margin-top: 30px;
+}
+
+.custom_meta_box th, .custom_meta_box td{
+	padding-bottom: 40px;
+}
+*/
+
+.custom_meta_box .hidden-ifNoSelect{
+	display: none;
+}
+
+.custom_meta_box .selected .hidden-ifNoSelect{
+	display: block;
+}
+
+.custom_meta_box .selected .hidden-ifSelect{
+	display: none;
+}
+
+
+.custom_meta_box .hidden-inline-ifNoSelect{
+	display: none;
+}
+
+.custom_meta_box .selected .hidden-inline-ifNoSelect{
+	display: inline;
+}
+
+.custom_meta_box .selected .hidden-inline-ifSelect{
+	display: none;
+}

@@ -58,6 +58,8 @@ class My_meta_box {
 				
 				wp_enqueue_script('custom-js', get_template_directory_uri().'/functions/metabox_gen/js/custom-js.js', array('chosen','jquery-ui-datepicker', 'googlemaps_places'));
 				wp_enqueue_style('jquery-ui-custom', get_template_directory_uri().'/functions/metabox_gen/css/jquery-ui-custom.css');
+				
+				wp_enqueue_style('custom-css', get_template_directory_uri().'/functions/metabox_gen/css/custom.css');
 
 				
 				
@@ -312,7 +314,7 @@ class My_meta_box {
 								break;
 								
 								//file upload
-								case 'file':
+								case 'file_deprecated':
 	
 									?>
 										<script>
@@ -428,6 +430,86 @@ class My_meta_box {
 
 								break;
 								
+								//# selector de un archivo avanzado, reaprobechando el sistema de subida de wordpress
+								case 'file':
+									
+										
+										if($meta != ''){
+										
+											$selected = true;
+											$url = wp_get_attachment_url($meta);//get_site_url() . '/wp-content/uploads/' . get_post_meta( $meta, '_wp_attached_file', true );//get_attachment_link($meta);//get_post_meta( $meta, '_wp_attached_file', true ); //wp_get_attachment_url($meta);
+											$name = basename($url);
+
+										}else{
+										
+											$selected = false;
+											$url = '';
+											$name = '';
+										}
+										
+										$classADD = ($selected) ? 'selected' : '';
+										
+										
+
+										?>
+											<div class="metabox_file bootstrap-wrapper <?php echo $classADD ?>">
+											
+												<div class="selected-container hidden-ifNoSelect">
+													Selected file: <a class="selected" href="<?php echo $url ?>" target="_blank"><?php echo $name ?></a><br><br>
+												</div>
+
+												<input type="hidden" name="<?php echo $field['id'] ?>" id="<?php echo $field['id'] ?>" class="data" value="<?php echo  $meta ?>">
+												
+												<a class="btn btn-default button-upload" href="#">
+													<span class="hidden-inline-ifNoSelect">Change</span>
+													<span class="hidden-inline-ifSelect">Upload</span>		
+												</a>
+												
+												<a class="btn btn-danger button-delete hidden-inline-ifNoSelect" href="#"> x </a>
+												
+												<br /><br /><span class="description"><?php echo $field['desc'] ?></span>
+												
+											</div>
+											
+										<?php
+
+								break;
+								
+								//# sistema flexible para elegir de un array a medida
+								case 'custom_list':
+								
+									$items = $field['custom_list'];
+									
+									echo '<select name="'.$field['id'].'" id="'.$field['id'].'"  ' , $field['chosen'] ? 'class="chosen"' : '' , '>
+											<option value="">Select One</option>'; // Select One
+										foreach($items as $item) {
+											
+											$id = $item[$field['custom_list_id']]; //(is_array($item)) ? 
+											$label = $item[$field['custom_list_label']];
+										
+											echo '<option value="'.$id.'"',$meta == $id ? ' selected="selected"' : '','>'.$label.'</option>';
+										} // end foreach
+									echo '</select><br /><span class="description">'.$field['desc'].'</span>';
+								break;
+								
+								//# sistema flexible para elegir de un array a medida, versión múltiple
+								case 'custom_list_multiple':
+								
+									$items = $field['custom_list'];
+
+									echo '<select name="'.$field['id'].'[]" id="'.$field['id'].'" multiple="multiple" ' , $field['chosen'] ? 'class="chosen"' : '' , '>';
+										
+										foreach($items as $item) {
+											
+											$id = $item[$field['custom_list_id']];
+											$label = $item[$field['custom_list_label']];
+																					
+											echo '<option value="'.$id.'"', $meta && in_array($id, $meta) ? ' selected="selected"' : '','>'.$label.'</option>';
+										} // end foreach
+										
+									echo '</select><br /><span class="description">'.$field['desc'].'</span>';
+								break;
+								
 								
 								//---------------------END ADD----
 							} //end switch
@@ -473,7 +555,7 @@ class My_meta_box {
 							if($field['type'] == 'tax_select') continue;
 							
 							//si es de tipo file
-							if($field['type'] == 'file'){
+							if($field['type'] == 'file_deprecated'){
 							
 								// If the user uploaded an image, let's upload it to the server
 								if( ! empty( $_FILES ) && isset( $_FILES[$field['id']] ) ) {
