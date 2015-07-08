@@ -136,7 +136,7 @@
 					'container'	 => false,
 					'menu_id'    => 'nav-main-sm',
 					'menu_class' => 'nav nav-cbp-spmenu',
-					'walker'	 => new Bootstrap_Walker_Nav_Menu()
+					'walker'	 => new wp_bootstrap_navwalker()
 				);
 
 				wp_nav_menu($args);
@@ -174,9 +174,9 @@
             <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">
             	            	
             	
-            	<!--<img class="hidden-xs img-responsive" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" onerror="this.onerror=null; this.src='img/logo.png'"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+            	<!--<img class="hidden-xs img-responsive" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" onerror="this.onerror=null; this.src='<?php bloginfo( 'stylesheet_directory' ); ?>/img/logo.png'"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
             	
-            	<img class="visible-xs img-responsive" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/logo-sm.svg" onerror="this.onerror=null; this.src='img/logo-sm.png'"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">-->
+            	<img class="visible-xs img-responsive" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/logo-sm.svg" onerror="this.onerror=null; this.src='<?php bloginfo( 'stylesheet_directory' ); ?>/img/logo-sm.png'"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">-->
             	
 
             </a>
@@ -207,7 +207,7 @@
 						'container'	 => false,
 						'menu_id'    => 'nav-main',
 						'menu_class' => 'nav navbar-nav hidden-sm hidden-xs',// nav-pills hidden-sm hidden-xs
-						'walker'	 => new Bootstrap_Walker_Nav_Menu()
+						'walker'	 => new wp_bootstrap_navwalker()
 					);//<ul id="%1$s" class="%2$s">%3$s</ul>
 
 					wp_nav_menu($args);

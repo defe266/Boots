@@ -13,7 +13,7 @@
 
 
 #cookieConsent-content{
-	padding: 20px;
+	padding: 10px;
 	
 	color: #444444;
 	max-width: 900px;
@@ -33,7 +33,7 @@
 #cookieConsentButton-container{
 	float: right;
 	text-align: center;
-	line-height: 42px;
+	line-height: 44px;
 }
 
 
