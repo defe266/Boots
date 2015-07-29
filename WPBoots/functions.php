@@ -17,7 +17,7 @@ include_once('functions/functions_lib.php');
 include_once('functions/ambrosite-post-link-plus/ambrosite-post-link-plus.php');
 include_once('functions/google-code-prettify/google-code-prettify.php');
 include_once('functions/youtubeParser/YoutubeParser.class.php');
-
+include_once('functions/autoYoutube/autoYoutube.php');
 
 
 
