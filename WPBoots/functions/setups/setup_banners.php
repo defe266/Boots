@@ -44,7 +44,16 @@ $custom_meta_fields = array(
 		'desc'	=> 'Banner destination URL.',
 		'id'	=> $prefix.'url',
 		'type'	=> 'text'
-	)/*,
+	),
+	
+	array(
+		'label'	=> 'Button',
+		'desc'	=> 'Button text (empty = no show).',
+		'id'	=> $prefix.'btn',
+		'type'	=> 'text'
+	)
+
+	/*,
 	array( //! prueba a quitar
 		'label'	=> 'File',
 		'desc'	=> 'file description',

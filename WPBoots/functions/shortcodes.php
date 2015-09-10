@@ -388,6 +388,15 @@ function short_banners($atts,$content) {
 			$bannerURL = get_post_meta($post->ID, 'wpb_banners_url', true);
 
 
+			$btn = '';
+			
+			if(get_post_meta($post->ID, 'wpb_banners_btn',true) != ''){
+			
+				$btn = '<a class="btn-banner btn btn-primary" href="'.$bannerURL.'">'.get_post_meta($post->ID, 'wpb_banners_btn',true).'</a>';
+			}
+
+
+
 			$output .= '<div class="col-sm-'.$span_cols.' col-md-'.$span_cols.'">
 							<div class="banner">
 								<div class="img-borders-container">
@@ -414,6 +423,7 @@ function short_banners($atts,$content) {
 								<div class="banner_content">
 									'.get_the_content().'
 								</div>
+								'.$btn.'
 							</div>
 						</div>';
 						

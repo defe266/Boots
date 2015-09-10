@@ -49,12 +49,11 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 
-<!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/apple-touch-icon-57-precomposed.png">
+	<!-- fav and touch icons -->
+	<link rel="shortcut icon" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/favicon_144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/favicon_72.png">
+	<link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'stylesheet_directory' );?>/ico/favicon_57.png">
 
 
 <!--[if lt IE 9]>

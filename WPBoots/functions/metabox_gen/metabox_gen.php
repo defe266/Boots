@@ -10,7 +10,7 @@ class My_meta_box {
 		protected $priority;
 		protected $fields;
 		
-		function __construct($id,$title,$page,$context,$priority,$fields)
+		function __construct($id,$title,$page,$context,$priority,$fields,$options = array())
 		{ 
 	      	 $this->id = $id;
 	      	 $this->title = $title;
@@ -18,6 +18,7 @@ class My_meta_box {
 	      	 $this->context = $context;
 	      	 $this->priority = $priority;
 	      	 $this->fields = $fields;
+	      	 $this->options = $options;
 	      	 
 	      	 
 	      	 //add_action('add_meta_boxes', 'add_custom_meta_box');
@@ -77,15 +78,46 @@ class My_meta_box {
    		
    		
    		function add_custom_meta_box() {
-		    add_meta_box(
-				$this->id,
-				$this->title,
-				//'show_custom_meta_box', // $callback
-				array( $this, 'show_custom_meta_box' ),
-				$this->page,
-				$this->context,
-				$this->priority
-				); 
+   		
+   			global $post;
+   			
+   			$addMetabox = true;
+   			
+   			//# conditional metabox load (cutom template etc)
+   			if( isset($this->options["show_on"]) ){
+   			
+   				switch($this->options["show_on"]["key"]){
+	   				
+	   				case "page-template":	$addMetabox = false;
+	   				
+	   										if(!empty($post)) {
+
+	   											$pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
+	   											
+	   											$addMetabox = in_array($pageTemplate, $this->options["show_on"]["value"]);
+	   										}
+	   										
+	   										break;
+	   										
+   				}
+	   			
+   			}
+
+		      
+   			//# if condition ok, add metabox
+   			if($addMetabox){
+   			
+   				add_meta_box(
+					$this->id,
+					$this->title,
+					//'show_custom_meta_box', // $callback
+					array( $this, 'show_custom_meta_box' ),
+					$this->page,
+					$this->context,
+					$this->priority
+					); 
+	   			
+   			}
 		}
    		
    		
@@ -430,7 +462,7 @@ class My_meta_box {
 
 								break;
 								
-								//# selector de un archivo avanzado, reaprobechando el sistema de subida de wordpress
+								//# selector de un archivo avanzado, reaprovechando el sistema de subida de wordpress
 								case 'file':
 									
 										
@@ -508,6 +540,12 @@ class My_meta_box {
 										} // end foreach
 										
 									echo '</select><br /><span class="description">'.$field['desc'].'</span>';
+								break;
+								
+								//simple separador
+								case 'hr':
+								
+									echo "<hr/>";
 								break;
 								
 								
