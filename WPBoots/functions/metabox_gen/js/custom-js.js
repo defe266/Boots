@@ -101,69 +101,108 @@ jQuery(function($) {
 	$('.metabox_gallery').each(function(){
 	
 		var gal = $(this);
+		var mediaView;
+		
+		
 	
-		var data = gal.find('.data').val();
+		
+		//# control buttons visibility
+		function gallery_updateInfo(){
+			
+			var data = gal.find('.data').val();
+		
+			if(data == ''){
+				
+				 gal.find('.remove').hide();
+				 
+			}else{
+			
+				 gal.find('.remove').show();
+			}
+		}
+		
+		function gallery_refreshMediaView(){
+			
+			var data = gal.find('.data').val();
 		
 		
-		//# iniciamos media con los elementos guardados
-		if(data != ''){
-		
-			var shortcode = new wp.shortcode({
-		        tag:      'gallery',
-		        attrs:    { ids: data },//'94,91,92' },
-		        type:     'single'
-		    });
-		
-			var attachments = wp.media.gallery.attachments( shortcode );
+			//# iniciamos media con los elementos guardados
+			if(data != ''){
+			
+				var shortcode = new wp.shortcode({
+			        tag:      'gallery',
+			        attrs:    { ids: data },//'94,91,92' },
+			        type:     'single'
+			    });
+			
+				var attachments = wp.media.gallery.attachments( shortcode );
+				    
+			    var selection = new wp.media.model.Selection( attachments.models, {
+			        props:    attachments.props.toJSON(),
+			        multiple: true
+			    });
+			     
+			    selection.gallery = attachments.gallery;
+			 
+			    selection.more().done( function() {
+			        selection.props.set({ query: false });
+			        selection.unmirror();
+			        selection.props.unset('orderby');
+			    });
+			
 			    
-		    var selection = new wp.media.model.Selection( attachments.models, {
-		        props:    attachments.props.toJSON(),
-		        multiple: true
-		    });
-		     
-		    selection.gallery = attachments.gallery;
-		 
-		    selection.more().done( function() {
-		        selection.props.set({ query: false });
-		        selection.unmirror();
-		        selection.props.unset('orderby');
-		    });
-		
+				//# creamos el objeto
+				mediaView = wp.media({
+			
+			        id:         'my-frame',          
+			        frame:      'post',
+			        state:      'gallery-edit',
+			        title:      wp.media.view.l10n.editGalleryTitle,
+			        library : { type : 'image'},
+			        editing:    true,
+			        multiple:   true,
+			        selection: selection
+			    });
 		    
-			//# creamos le objeto
-			var mediaView = wp.media({
+		    }else{
+		    
+		    	//# creamos el objeto
+				mediaView = wp.media({
+			
+			        id:         'my-frame',          
+			        frame:      'post',
+			        state:      'gallery-edit',
+			        title:      wp.media.view.l10n.editGalleryTitle,
+			        library : { type : 'image'},
+			        editing:    true,
+			        multiple:   true
+			    });
+		    }
+		}
 		
-		        id:         'my-frame',          
-		        frame:      'post',
-		        state:      'gallery-edit',
-		        title:      wp.media.view.l10n.editGalleryTitle,
-		        library : { type : 'image'},
-		        editing:    true,
-		        multiple:   true,
-		        selection: selection
-		    });
-	    
-	    }else{
-	    
-	    	//# creamos le objeto
-			var mediaView = wp.media({
-		
-		        id:         'my-frame',          
-		        frame:      'post',
-		        state:      'gallery-edit',
-		        title:      wp.media.view.l10n.editGalleryTitle,
-		        library : { type : 'image'},
-		        editing:    true,
-		        multiple:   true
-		    });
-	    }
-	
+		//# init mediaview & buttons the first time
+		gallery_refreshMediaView();
+		gallery_updateInfo();
 	
 	
 		//# abrimos la ventana
-		gal.find('.button').on('click',function(){
+		gal.find('.add').on('click',function(e){
+		
+			e.preventDefault();
 			
 			mediaView.open();
+			
+		});
+		
+		//# Eliminamos la galería
+		gal.find('.remove').on('click',function(e){
+		
+			e.preventDefault();
+			
+			gal.find('.data').val('');
+			
+			gallery_refreshMediaView();
+			gallery_updateInfo();
 			
 		});
 		
@@ -188,6 +227,8 @@ jQuery(function($) {
 			}
 			
 			gal.find('.data').val(ids);
+			
+			gallery_updateInfo();
 		});
 	
 	});

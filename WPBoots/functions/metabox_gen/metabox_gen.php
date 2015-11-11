@@ -79,7 +79,7 @@ class My_meta_box {
    		
    		function add_custom_meta_box() {
    		
-   			global $post;
+		    global $post;
    			
    			$addMetabox = true;
    			
@@ -117,7 +117,7 @@ class My_meta_box {
 					$this->priority
 					); 
 	   			
-   			}
+   			} 
 		}
    		
    		
@@ -428,11 +428,11 @@ class My_meta_box {
 									
 									//$meta && in_array($option->ID, $meta) ? ' checked="checked"' : ''
 									
-										echo '<div class="metabox_gallery">';
+										echo '<div class="metabox_gallery  bootstrap-wrapper">';
 									
 											echo '<input type="hidden" name="'.$field['id'].'" id="'.$field['id'].'" class="data" value="' . $meta . '">';
-											
-											echo '<a class="button" href="#">'.'Upload/order images'.'</a>
+											//button
+											echo '<a class="add btn btn-default" href="#">'.'Upload/order images'.'</a> <a class="remove btn btn-danger button-delete" href="#"> Empty gallery </a>
 													<br /><span class="description">'.$field['desc'].'</span>';
 												
 										echo '</div>';
@@ -462,7 +462,7 @@ class My_meta_box {
 
 								break;
 								
-								//# selector de un archivo avanzado, reaprovechando el sistema de subida de wordpress
+								//# selector de un archivo avanzado, reaprobechando el sistema de subida de wordpress
 								case 'file':
 									
 										
@@ -542,7 +542,7 @@ class My_meta_box {
 									echo '</select><br /><span class="description">'.$field['desc'].'</span>';
 								break;
 								
-								//simple separador
+								//simple separator
 								case 'hr':
 								
 									echo "<hr/>";
