@@ -546,6 +546,12 @@ class My_meta_box {
 								case 'hr':
 								
 									echo "<hr/>";
+									
+								//HTML output	
+								case 'html':
+								
+									echo $meta;
+									echo '<br /><span class="description">'.$field['desc'].'</span>';
 								break;
 								
 								
