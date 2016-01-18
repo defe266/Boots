@@ -1,10 +1,6 @@
 
 var BootsAPI = {};
 
-
-jQuery(function ($){
-
-	//BootsAPI.lib = {};
 	
 	//# info básica de wp
 	BootsAPI.wp = BootsAPI_wp;
@@ -92,7 +88,3 @@ jQuery(function ($){
 	    
 	    return formData;
 	}
-	
-	
-	
-});

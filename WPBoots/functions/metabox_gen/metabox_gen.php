@@ -54,7 +54,7 @@ class My_meta_box {
 				wp_enqueue_style( 'chosen', get_template_directory_uri().'/functions/metabox_gen/lib/chosen/chosen.min.css');
 				wp_enqueue_script('chosen', get_template_directory_uri().'/functions/metabox_gen/lib/chosen/chosen.jquery.min.js', array('jquery') );
 				
-				wp_enqueue_script( 'googlemaps_places', 'http://maps.googleapis.com/maps/api/js?libraries=places' );
+				wp_enqueue_script( 'googlemaps_places', 'https://maps.googleapis.com/maps/api/js?libraries=places' );
 				
 				
 				wp_enqueue_script('custom-js', get_template_directory_uri().'/functions/metabox_gen/js/custom-js.js', array('chosen','jquery-ui-datepicker', 'googlemaps_places'));

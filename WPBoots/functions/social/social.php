@@ -210,17 +210,13 @@
 			</li>
 			<!-- Twitter Button -->
 			<li class="social-twitter">
-				<a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE" target="blank"> <i class="icon icon-twitter fa fa-twitter" title="Tweet"></i> </a><span class="share-count"><?php echo ds_post_tweet_count( $post_id ); ?></span><!--via=XXX_YOUR_TWITTER_HANDLE-->
+				<a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE" target="blank"> <i class="icon icon-twitter fa fa-twitter" title="Tweet"></i> </a><!--via=XXX_YOUR_TWITTER_HANDLE-->
 			</li>
 			<!-- Google + Button-->
 			<li class="social-google">
 				<a onclick="javascript:popupCenter('https://plus.google.com/share?url=<?php the_permalink(); ?>','Share on Google+', '600', '600');return false;" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="blank"> <i class="icon icon-google-plus fa fa-google-plus" title="Share"></i> </a><span class="share-count"><?php echo ds_post_plusone_count( $post_id ); ?></span>
 			</li>
-			<!-- Flattr Button-->
-			<!--
-			<li class="social-icon flattr">
-				<a onclick="javascript:popupCenter('https://flattr.com/submit/auto?user_id=XXX_YOUR_FLATTR_ID&url=<?php echo urlencode(get_permalink($post->ID)); ?>&title=<?php echo rawurlencode(strip_tags(get_the_title())) ?>&language=de_DE&&category=text','Support with Flattr', '680', '400');return false;" href="https://flattr.com/submit/auto?user_id=XXX_YOUR_FLATTR_ID&url=<?php echo urlencode(get_permalink($post->ID)); ?>&title=<?php echo rawurlencode(strip_tags(get_the_title())) ?>&language=de_DE&&category=text" target="blank" rel="nofollow">Flattr</a><span class="share-count"><?php echo ds_post_flattr_count( $post_id ); ?></span>
-			</li>-->
+
 			<!-- LinkedIn Button -->
 			<li class="social-linkedin">
 				<a onclick="javascript:popupCenter('http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>&amp;source=<?php site_url(); ?>','Share on LinkedIn', '520', '570');return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>&amp;source=<?php site_url(); ?>" target="blank"> <i class="icon icon-linkedin fa fa-linkedin" title="Share"></i>  </a><span class="share-count"><?php echo ds_post_linkedin_count( $post_id ); ?></span>

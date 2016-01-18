@@ -111,9 +111,56 @@ function wpboots_page_permalink($value, $tipeValue = 'slug'){
 	return get_permalink( $pageid );
 }
 
+
+
+function wpb_page_id($value, $tipeValue = 'slug'){
+
+	$protoID = 0;
+	
+	if($tipeValue == 'slug'){
+	
+		$page = get_page_by_path( $value );
+		$protoID = $page->ID;
+	}
+	
+	if($tipeValue == 'id'){
+	
+		$protoID = $value;
+	}
+
+					
+	$pageid = ( function_exists('icl_object_id') ) ? icl_object_id($protoID,'page',true) : $protoID;
+	
+	return $pageid;
+}
+
+
+//# funciones auxiliares para obtener posts adaptados por wpml en caso de existir
+/*
+function wpb_get_post($protoID, $post_type = 'post'){
+				
+	$pageid = ( function_exists('icl_object_id') ) ? icl_object_id($protoID,$post_type,true) : $protoID;
+	
+	return get_post( $pageid );
+}
+*/
 //# funciones auxiliares para obtener posts adaptados por wpml en caso de existir
 
-function wpb_get_post($protoID, $post_type = 'post'){
+function wpb_get_post($value, $post_type = 'post', $tipeValue = 'id'){
+
+
+	$protoID = 0;
+	
+	if($tipeValue == 'slug'){
+	
+		$page = get_page_by_path( $value );
+		$protoID = $page->ID;
+	}
+	
+	if($tipeValue == 'id'){
+	
+		$protoID = $value;
+	}
 				
 	$pageid = ( function_exists('icl_object_id') ) ? icl_object_id($protoID,$post_type,true) : $protoID;
 	

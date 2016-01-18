@@ -249,7 +249,7 @@ function wpbootstrap_gallery_shortcode($output, $attr) {
 			{
 				$col = 1;
 				
-				$output .= '<div class="row-fluid">';
+				$output .= '<div class="row">';
 				$output .= $elm;
 			}
 			else
@@ -260,7 +260,7 @@ function wpbootstrap_gallery_shortcode($output, $attr) {
 					$col=1;
 					
 					$output .= '</div>';
-					$output .= '<div class="row-fluid">';
+					$output .= '<div class="row">';
 					$output .= $elm;
 				}
 				else
@@ -493,7 +493,7 @@ function short_news($atts,$content) {
     $output = '';
     
     
-    $output .= '<section id="news_section" class="row-fluid">';
+    $output .= '<section id="news_section" class="row">';
 					
 
 		query_posts( array( 'post_type' => 'post', 'category_name' => $category, 'posts_per_page' => $columns, 'ignore_sticky_posts' => 1, 'orderby' => 'date', 'order' => 'DESC') );
@@ -591,7 +591,7 @@ function short_projects($atts,$content) {
     $output = '';
     
     
-    $output .= '<section id="projects_section" class="row-fluid">';
+    $output .= '<section id="projects_section" class="row">';
 					
 		
 		$r = new WP_Query(array( 'post_type' => 'project', 'project-type' => $category, 'posts_per_page' => $columns, 'orderby' => $orderby, 'order' => $order));
