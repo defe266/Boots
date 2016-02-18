@@ -17,7 +17,6 @@ jQuery(function ($) {
 				var galleryItems = $('[data-fancybox-group="'+galleryName+'"]');
 			    var items = [];
 			    var index = galleryItems.index(elm);
-			    console.log("index", index)
 			    
 			    galleryItems.each(function(){
 				    

@@ -5,7 +5,9 @@
 	function bootstrap_enqueue(){
 	
 		wp_enqueue_style("bootstrap", get_template_directory_uri().'/functions/bootstrap/css/bootstrap.min.css');
+		
 		wp_enqueue_script("bootstrap", get_template_directory_uri().'/functions/bootstrap/js/bootstrap.min.js', array("jquery"));
+		wp_enqueue_script("bootstrap-touch-carousel", get_template_directory_uri().'/functions/bootstrap/lib/bootstrap-touch-carousel.js', array("bootstrap"));
 	}
 
 
