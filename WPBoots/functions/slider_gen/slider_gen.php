@@ -17,20 +17,23 @@ function slider_register(){
 		  );
 		  $args = array(
 		    'labels' => $args_labels,
+		    'public' => false,
+			'show_ui' => true,
+			/*
 		    'public' => true,
 		    'publicly_queryable' => true,
 		    'show_ui' => true,
 		    'query_var' => true,
-		    'rewrite' => true,
+		    'rewrite' => true,*/
 		    'capability_type' => 'post',
 		    'hierarchical' => true,
 		    'register_meta_box_cb' => 'slider_add_meta_box',
 		    'menu_position' => 20, // 5 - below Posts, 10 - below Media, 20 - below Pages, 60 - below first separator, 100 - below second separator
-		    'supports' => array('title','editor'),//thumbnail editor
-		  'rewrite' => array(
+		    'supports' => array('title','editor')//,//thumbnail editor
+		  /*'rewrite' => array(
 		    'slug' => 'slider',
 		    'with_front' => FALSE
-		  )
+		  )*/
 		); 
 		// Con los arrays creados, por fin llamamos a la función Register post Type:
 		register_post_type('slider',$args);
