@@ -355,6 +355,8 @@ function adjacent_post_link_plus($args = '', $format = '%link &raquo;', $previou
 		$link = str_replace('%date', $date, $link);
 		$link = $anchor . $link . '</a>';
 	
+		
+		
 		$format = str_replace('%link', $link, $r['format']);
 		$format = str_replace('%title', $title, $format);
 		$format = str_replace('%date', $date, $format);
@@ -395,6 +397,9 @@ function adjacent_post_link_plus($args = '', $format = '%link &raquo;', $previou
 //		If more than one link is returned, wrap them in <li> tags		
 		if ( intval($r['num_results']) > 1 )
 			$format = '<li>' . $format . '</li>';
+		
+		//! fix: add %href for more personalization
+		$format = str_replace('%href', get_permalink($post), $format);
 		
 		$output .= $format;
 	}

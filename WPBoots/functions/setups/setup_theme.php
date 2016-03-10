@@ -171,8 +171,21 @@ function toolbox_content_nav( $nav_id , $args = null ) {
 		
 			<?php
 			
-				$prevArgs = array('format' => '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . '&larr;' . '</span> %title');
+				/*$prevArgs = array('format' => '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">' . '&larr;' . '</span> %title');
 				$nextArgs = array('format' => '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">' . '&rarr;' . '</span>');
+				*/
+				$prevArgs = array();
+				$nextArgs = array();
+				
+				if( isset($args['format_left']) ){
+				
+					$prevArgs = $prevArgs + array('format' => $args['format_left']);
+				}
+				
+				if( isset($args['format_right']) ){
+				
+					$nextArgs = $nextArgs + array('format' => $args['format_right']);
+				}
 				
 				if(isset($args)){
 				
