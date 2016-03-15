@@ -102,8 +102,12 @@ function short_slider($atts)
       'id' => '',
       'gallery' => '',
       'size' => 'full',
-      'background' => 'false'
+      'background' => 'false',
+      'icon_left' => '',
+      'icon_right' => ''
       ), $atts ) );
+      
+      
 
 	
 	slider_init_enqueue();
@@ -247,10 +251,10 @@ function short_slider($atts)
 	if($i > 1)
 	{
 		$controles = '<a class="left carousel-control" href="#myCarousel-'.$pageid_name.'" role="button" data-slide="prev">
-					    <span class="glyphicon glyphicon-chevron-left"></span>
+					    <span class="'.(($icon_left != '' ) ? 'icon-custom-prev '.$icon_left : 'glyphicon glyphicon-chevron-left').'"></span>
 					  </a>
 					  <a class="right carousel-control" href="#myCarousel-'.$pageid_name.'" role="button" data-slide="next">
-					    <span class="glyphicon glyphicon-chevron-right"></span>
+					    <span class="'.(($icon_right != '' ) ? 'icon-custom-next '.$icon_right : 'glyphicon glyphicon-chevron-right').'"></span>
 					  </a>';
 	}
 	
