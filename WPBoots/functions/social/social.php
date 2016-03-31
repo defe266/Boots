@@ -206,7 +206,7 @@
 		<ul class="block-social  bordered"><!--colored-->
 			<!-- Facebook Button-->
 			<li class="social-facebook">
-				<a onclick="javascript:popupCenter('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=<?php echo get_option("wpboots_facebookID"); ?>','Facebook Share', '540', '400');return false;" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=<?php echo get_option("wpboots_facebookID"); ?>" target="blank"> <i class="icon icon-facebook fa fa-facebook" title="Share"></i> </a><span class="share-count"><?php echo ds_post_like_count( $post_id ); ?></span>
+				<a onclick="javascript:popupCenter('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=<?php echo get_option("wpboots_facebookID"); ?>','Facebook Share', '540', '400');return false;" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=<?php echo get_option("wpboots_facebookID"); ?>" target="blank"> <i class="icon icon-facebook fa fa-facebook" title="Share"></i> </a><span class="share-count"><?php //echo ds_post_like_count( $post_id ); ?></span>
 			</li>
 			<!-- Twitter Button -->
 			<li class="social-twitter">
@@ -214,12 +214,12 @@
 			</li>
 			<!-- Google + Button-->
 			<li class="social-google">
-				<a onclick="javascript:popupCenter('https://plus.google.com/share?url=<?php the_permalink(); ?>','Share on Google+', '600', '600');return false;" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="blank"> <i class="icon icon-google-plus fa fa-google-plus" title="Share"></i> </a><span class="share-count"><?php echo ds_post_plusone_count( $post_id ); ?></span>
+				<a onclick="javascript:popupCenter('https://plus.google.com/share?url=<?php the_permalink(); ?>','Share on Google+', '600', '600');return false;" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="blank"> <i class="icon icon-google-plus fa fa-google-plus" title="Share"></i> </a><span class="share-count"><?php //echo ds_post_plusone_count( $post_id ); ?></span>
 			</li>
 
 			<!-- LinkedIn Button -->
 			<li class="social-linkedin">
-				<a onclick="javascript:popupCenter('http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>&amp;source=<?php site_url(); ?>','Share on LinkedIn', '520', '570');return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>&amp;source=<?php site_url(); ?>" target="blank"> <i class="icon icon-linkedin fa fa-linkedin" title="Share"></i>  </a><span class="share-count"><?php echo ds_post_linkedin_count( $post_id ); ?></span>
+				<a onclick="javascript:popupCenter('http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>&amp;source=<?php site_url(); ?>','Share on LinkedIn', '520', '570');return false;" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>&amp;source=<?php site_url(); ?>" target="blank"> <i class="icon icon-linkedin fa fa-linkedin" title="Share"></i>  </a><span class="share-count"><?php //echo ds_post_linkedin_count( $post_id ); ?></span>
 			</li>
 		</ul>
 	  
@@ -305,13 +305,15 @@
 			}
 			
 			.block-social.bordered .share-count{
+				display: none;
+				/*
 				background: none repeat scroll 0 0 #444;
 			    bottom: 0;
 			    font-size: 9px;
 			    line-height: 9px;
 			    padding: 2px 3px;
 			    position: absolute;
-			    right: 0;
+			    right: 0;*/
 			}
 			
 			.block-social.bordered .social-facebook{
