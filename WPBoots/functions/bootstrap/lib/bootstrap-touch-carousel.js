@@ -45,13 +45,18 @@
 
 
 
-//# add swipe suport for bootstrap carousels
-$(document).ready(function() {  
-    	$('.carousel').hammer().on('swipeleft', function(){
-  			$(this).carousel('next'); 
-  		})
-  		$('.carousel').hammer().on('swiperight', function(){
-  			$(this).carousel('prev'); 
-  		})
- });
+
+jQuery(function($){
+	
+	//# add swipe suport for bootstrap carousels
+	$(document).ready(function() {  
+	    	$('.carousel').hammer().on('swipeleft', function(){
+	  			$(this).carousel('next'); 
+	  		})
+	  		$('.carousel').hammer().on('swiperight', function(){
+	  			$(this).carousel('prev'); 
+	  		})
+	 });
+})
+
 

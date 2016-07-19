@@ -213,7 +213,7 @@ function short_slider($atts)
 		//$caption = '';
 		
 		
-		if($atts["background"] == "true"){
+		if($background == "true"){
 		
 			$imgItem = '<div class="item-img" style="background: url(\''.$img[0].'\') no-repeat center center transparent; background-size: cover; width:100%; min-height:400px;"></div>';
 			
@@ -250,6 +250,16 @@ function short_slider($atts)
 	
 	if($i > 1)
 	{
+		$indicators = '<ol class="carousel-indicators">';
+		
+			for($j = 0; $j < $i ; $j++){
+				
+				$indicators .= '<li data-target="#myCarousel-'.$pageid_name.'" class="'.($j == 0 ? 'active' : '').'" data-slide-to="'.$j.'"></li>';
+			}
+			
+		$indicators .= '</ol>';
+	
+	
 		$controles = '<a class="left carousel-control" href="#myCarousel-'.$pageid_name.'" role="button" data-slide="prev">
 					    <span class="'.(($icon_left != '' ) ? 'icon-custom-prev '.$icon_left : 'glyphicon glyphicon-chevron-left').'"></span>
 					  </a>
@@ -262,7 +272,7 @@ function short_slider($atts)
 
 
 	$output .= '</div>
-		  '.$controles.'
+		  '.$indicators.$controles.'
 		</div>';
 
 	

@@ -388,7 +388,7 @@ function toolbox_enhanced_image_navigation( $url ) {
 
 
 //Enqueue jquery from google CDN with local fallback
-
+/*
 $url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'; // the URL to check against   //1.8.0
 $test_url = @fopen($url,'r'); // test parameters
 
@@ -419,7 +419,14 @@ else
 	add_action('wp_enqueue_scripts', 'load_local_jQuery');
 
 }  
+*/
 
+//# base css
+
+add_action('wp_enqueue_scripts', function(){
+	
+	wp_enqueue_style("init_css", get_template_directory_uri().'/css/init.css');
+});
 
 
 //Prevent width & height attributes from being added to new images added to the editor
@@ -439,6 +446,7 @@ add_theme_support('post-thumbnails');
 
 
 // sizes for each span columns
+/*
 add_image_size( 'thumb-standar', 480, 360, true );
 add_image_size( 'thumb1', 70, 40, true );
 add_image_size( 'thumb2', 170, 95, true );
@@ -447,7 +455,7 @@ add_image_size( 'thumb4', 370, 208, true );
 add_image_size( 'thumb6', 570, 320, true );
 add_image_size( 'thumb9', 870, 488, true );
 add_image_size( 'thumb12', 1170, 658, true );
-
+*/
 /* panoramic ratio:
 
 add_image_size( 'thumb1', 70, 52, true );

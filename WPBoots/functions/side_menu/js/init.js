@@ -120,7 +120,7 @@ jQuery(function ($){
     */
     
     //cierro si venía de un link
-    $('a[href*=#]:not([href=#])').click(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
     
     	html.removeClass("cbp-sp-open");
     
