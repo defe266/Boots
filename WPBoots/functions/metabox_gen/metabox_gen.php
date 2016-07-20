@@ -653,7 +653,7 @@ class My_meta_box {
 							}
 							
 							
-							if ($new && $new != $old) {
+							if ($new != $old) {//$new && 
 								update_post_meta($post_id, $field['id'], $new);
 							} elseif ('' == $new && $old) {
 								delete_post_meta($post_id, $field['id'], $old);
