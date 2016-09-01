@@ -36,6 +36,7 @@
 	function wpboots_registerSettings() {
 	
 		register_setting( 'wpboots', 'wpboots_pageCookies' );
+		register_setting( 'wpboots', 'wpboots_pageContact' );
 		register_setting( 'wpboots', 'wpboots_facebookID' );
 		/*
 		register_setting( 'wpboots', 'wpboots_prepaid' );
@@ -100,12 +101,48 @@
 				    <table class="form-table">
 				    
 				    	<tr valign="top">
-				        	<th scope="row">Ruta "política de cookies"</th>
+				        	<th scope="row">Ruta "Política de cookies"</th>
 				       		<td>
 				        
 					        	<?php 
 					        	
 					        			$option = 'wpboots_pageCookies';
+					        			
+					        			$meta = esc_attr( get_option($option) );
+					        			
+					        			$items = get_posts( array (
+											'post_type'	=> 'page',
+											'posts_per_page' => -1,
+											'suppress_filters' => 0
+										));
+										
+										
+										
+										//$meta && in_array($option->ID, $meta) ? ' checked="checked"' : ''
+										
+											echo '<select name="'.$option.'" id="'.$option.'" >';
+											
+												echo '<option value="-1">*Ninguna</option>';
+												
+												foreach($items as $item) {
+												
+													echo '<option value="'.$item->ID.'"', $meta == $item->ID ? ' selected="selected"' : '','>'.$item->post_title.'</option>';
+												} // end foreach
+											echo '</select>';
+					        	
+					        	?>
+
+				        	
+				        	</td>
+				        </tr>
+				        
+				        <tr valign="top">
+				        	<th scope="row">Ruta "Contacto"</th>
+				       		<td>
+				        
+					        	<?php 
+					        	
+					        			$option = 'wpboots_pageContact';
 					        			
 					        			$meta = esc_attr( get_option($option) );
 					        			
