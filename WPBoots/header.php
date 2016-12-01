@@ -49,44 +49,6 @@
 
 
 
-<!-- share FB Fix -->
-<?php
-	$thumb = get_post_meta($post->ID,'_thumbnail_id',false);
-?>
-
-<?php if($thumb) : ?>
-
-		<?php
-		$thumb = wp_get_attachment_image_src($thumb[0], false);
-		$thumb = $thumb[0];
-		$default_img = get_bloginfo('stylesheet_directory').'/img/logo.png';
-	 
-		?>
-	 
-	<?php if(is_single() || is_page()) { ?>
-		<meta property="og:type" content="article" />
-		<meta property="og:title" content="<?php single_post_title(''); ?>" />
-		<meta property="og:description" content="<?php 
-		while(have_posts()):the_post();
-		$out_excerpt = str_replace(array("\r\n", "\r", "\n"), "", get_the_excerpt());
-		echo apply_filters('the_excerpt_rss', $out_excerpt);
-		endwhile; 	?>" />
-		<meta property="og:url" content="<?php the_permalink(); ?>"/>
-		<meta property="og:image" content="<?php if ( $thumb[0] == null ) { echo $default_img; } else { echo $thumb; } ?>" />
-	<?php  } else { ?>
-		<meta property="og:type" content="article" />
-	   <meta property="og:title" content="<?php bloginfo('name'); ?>" />
-		<meta property="og:url" content="<?php bloginfo('url'); ?>"/>
-		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
-	    <meta property="og:image" content="<?php  if ( $thumb[0] == null ) { echo $default_img; } else { echo $thumb; } ?>" />
-	<?php  }  ?>
-	
-<?php endif; ?>
-<!--END share FB Fix -->
-
-
-
-
 <?php wp_head(); ?>
 
 
