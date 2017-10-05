@@ -19,11 +19,14 @@ jQuery(function ($) {
 			    var index = galleryItems.index(elm);
 			    
 			    galleryItems.each(function(){
+			    
+			    	var w = $(this).data('img-width')
+			    	var h = $(this).data('img-height')
 				    
 				    items.push({
 			            src: $(this).attr('href'),
-			            w: $(this).data('img-width'),
-			            h: $(this).data('img-height')
+			            w: w ? w : 0,
+			            h: h ? h : 0
 					});
 			    });
 			    

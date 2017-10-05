@@ -84,7 +84,8 @@ function wpbootstrap_gallery_shortcode($output, $attr) {
 
 	//load fancybox scripts and styles
 	//add_action( 'wp_enqueue_scripts', 'fancybox_enqueue' );
-	fancybox_enqueue();
+	//fancybox_enqueue();
+	photoswipe_enqueue();
 
 	static $instance = 0;
 	$instance++;
@@ -231,9 +232,9 @@ function wpbootstrap_gallery_shortcode($output, $attr) {
 	  		$img = wp_get_attachment_image_src($id, $size);
 		  	
 		  	$img_full = wp_get_attachment_image_src($id, "full");
-		  	$img_full = $img_full[0];
+		  	//$img_full = $img_full[0];
 		  	
-		  	$link = '<a class="fancybox" data-fancybox-group="'.$selector.'" href="'.$img_full.'">
+		  	$link = '<a class="fancybox" data-fancybox-group="'.$selector.'" href="'.$img_full[0].'" data-img-width="'.$img_full[1].'" data-img-height="'.$img_full[2].'">
 				  		<img class="attachment-Gallery-thumb " src="'.$img[0].'" alt="img-Gallery">
 					</a>';
 		  	
